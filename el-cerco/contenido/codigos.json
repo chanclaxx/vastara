@@ -1,0 +1,29 @@
+{
+  "_nota": "Códigos que da el juego. Se comparan sin mayúsculas, espacios ni guiones. 'abre' es el id del documento; 'epoca' es a dónde salta el mapa.",
+  "codigos": [
+    {
+      "codigo": "SELLO-RIZ-0613",
+      "abre": "pliego-riz",
+      "epoca": "banquete",
+      "origen": "Oleada 1: matar al Testigo Tobal Riz"
+    },
+    {
+      "codigo": "ACTA-SEDAL-1147",
+      "abre": "acta-sedal",
+      "epoca": "vigilia",
+      "origen": "Oleada 1: ahorcar al alférez Bruno Sedal"
+    },
+    {
+      "codigo": "SELLO-AMBAZ-2290",
+      "abre": "pliego-ambaz",
+      "epoca": "cadaval",
+      "origen": "Oleada 2: matar al Testigo Ruel Ambaz"
+    },
+    {
+      "codigo": "ACTA-CAVIR-0388",
+      "abre": "acta-cavir",
+      "epoca": "cadaval",
+      "origen": "Oleada 2: ahorcar al teniente Osmar Cavir"
+    }
+  ]
+}

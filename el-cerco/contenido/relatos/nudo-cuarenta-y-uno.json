@@ -1,0 +1,11 @@
+{
+  "id": "nudo-cuarenta-y-uno",
+  "tipo": "relato",
+  "titulo": "Nudo cuarenta y uno",
+  "subtitulo": "Del cuaderno de una cantora novicia, en el archivo de nombres",
+  "voz": "marjal",
+  "epoca": "vigilia",
+  "imagen": "imagenes/costumbres/deuda-de-nombres.webp",
+  "oficial": "Esta mañana me dieron mi primer cordel entero. Hasta hoy solo había atado nudos en cordeles de otras.\n\nEl nombre cuarenta y uno de la Esclusa no es nuestro. Era un ballestero de la vanguardia: cayó al agua frente a la compuerta y la corriente lo trajo hasta los pilotes del archivo. Nadie sabía cómo se llamaba. Adné me enseñó a buscarlo: la medalla del cuello, la marca del sastre en el jubón, las botas, que en el altiplano se cosen con dos costuras.\n\nAl mediodía lo supimos: Anselm, de las Peñas de Oter. Lo canté tres veces, como se canta a los que nadie vendrá a reclamar, y até el nudo.\n\nAdné dice que el nudo de un enemigo pesa igual que el de un hermano. Yo tenía miedo de que mi mano no quisiera apretar. Apretó.\n\nMañana vendrán más. El factor Vedrani ha mandado traer cordel nuevo de Lirn, y la casa lo paga sin preguntar el precio: una casa que debe un nombre no puede cerrar ninguna cuenta.\n\nNingún nombre se pierde.",
+  "enlaces": ["adne-sarrio", "deuda-de-nombres", "archivo-de-nombres", "penas-de-oter", "halce-vedrani"]
+}

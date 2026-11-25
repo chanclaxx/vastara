@@ -1,0 +1,19 @@
+{
+  "id": "isla-de-ysme",
+  "tipo": "lugar",
+  "titulo": "Isla de Ysmé",
+  "subtitulo": "El Marjal · la casa de las cantoras",
+  "voz": "marjal",
+  "territorio": "marjal",
+  "pos": [
+    140,
+    500
+  ],
+  "menor": true,
+  "oficial": "Una isla en una laguna cerrada, con un solo embarcadero. Aquí aprenden las cantoras de la orden de Ysmé: a recitar sin papel, a atar sin dinero y a no cortarse nunca el cabello.\n\nLa orden no posee la isla; la isla no es de nadie. Ninguna casa del delta ha podido comprarla, y varias lo han intentado.",
+  "enlaces": [
+    "adne-sarrio",
+    "deuda-de-nombres",
+    "archivo-de-nombres"
+  ]
+}

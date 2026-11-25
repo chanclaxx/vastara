@@ -1,0 +1,20 @@
+{
+  "id": "ermita-del-bienaventurado",
+  "tipo": "lugar",
+  "titulo": "Ermita del Bienaventurado",
+  "subtitulo": "Solania · camino de la Mirada Alta",
+  "voz": "solania",
+  "territorio": "solania",
+  "pos": [
+    128,
+    178
+  ],
+  "menor": true,
+  "desde": "banquete",
+  "oficial": "Capilla de piedra levantada en el 214, a medio día de la Mirada Alta, sobre el camino por el que el Testigo Perán Vela llegaba desde Cadaval. Guarda la funda de cuero donde llevó su pliego, abierta y vacía.\n\nLos soldados que parten hacia el delta se detienen aquí y dejan una pluma. El arciprestazgo dice que ya pasan de nueve mil.",
+  "enlaces": [
+    "peran-vela",
+    "mirada-alta",
+    "pliego-peran"
+  ]
+}

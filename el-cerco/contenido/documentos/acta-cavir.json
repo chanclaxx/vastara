@@ -1,0 +1,15 @@
+{
+  "id": "acta-cavir",
+  "tipo": "documento",
+  "titulo": "Acta de martirio del teniente Osmar Cavir",
+  "subtitulo": "Dada por el arciprestazgo de la Mirada Alta",
+  "clase": "acta",
+  "acceso": "acta",
+  "cita": "el acta de martirio del teniente Osmar Cavir",
+  "texto": "El arciprestazgo de la Mirada Alta da fe de que el teniente Osmar Cavir, pagador de la vanguardia, fue ahorcado por los mercaderes del delta en la Esclusa de Vedre, y de que el cofre con la soldada de la vanguardia no ha vuelto.\n\nSirvió a la corona desde el cierre de Cadaval, cuando la peste subió por el río desde el delta. Lo ahorcaron los mismos que la trajeron.\n\nSu Testigo, Ruel Ambaz, vive. Su pliego sigue cerrado. El arciprestazgo no necesita abrirlo para saber lo que dice.\n\nSe le cuenta entre los mártires de la Segunda Vigilia.",
+  "enlaces": [
+    "el-marjal",
+    "marca-de-cadaval",
+    "teodra-vedrani"
+  ]
+}

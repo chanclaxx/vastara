@@ -1,0 +1,19 @@
+{
+  "id": "fundicion-de-hesk",
+  "tipo": "lugar",
+  "titulo": "Hesk, la fundición",
+  "subtitulo": "La Forja · galería del oeste",
+  "voz": "forja",
+  "territorio": "forja",
+  "pos": [
+    640,
+    120
+  ],
+  "menor": true,
+  "oficial": "Galería de fundición y montaje. Aquí se arman las máquinas de asedio que la Liga entrega a quien las encarga: 3 modelos de trabuco, 2 de mantelete y 1 de torre, cada uno con su tabla de tiro.\n\nCada máquina sale de Hesk con un ingeniero gremial que anota sus disparos. La Liga no vende armas: vende disparos contados.",
+  "enlaces": [
+    "la-forja",
+    "galerias-de-la-forja",
+    "marco-de-arbelas"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "torre-de-merre",
+  "tipo": "lugar",
+  "titulo": "Torre de cálculo de Merre",
+  "subtitulo": "La Forja · la galería más alta",
+  "voz": "forja",
+  "territorio": "forja",
+  "pos": [
+    905,
+    90
+  ],
+  "menor": true,
+  "oficial": "La galería más alta de la cordillera, donde los maestres de registro hacen sus tablas. Las ventanas miran al norte para que la luz no cambie a lo largo del día y las cifras se copien siempre igual.\n\nLa Liga enseña aquí a 40 aprendices por generación. Solo 1 de cada 40 llega a firmar una placa.",
+  "enlaces": [
+    "emeric-sault",
+    "registro-de-costo"
+  ]
+}

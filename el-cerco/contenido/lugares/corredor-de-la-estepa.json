@@ -1,0 +1,19 @@
+{
+  "id": "corredor-de-la-estepa",
+  "tipo": "lugar",
+  "titulo": "Corredor de la Estepa",
+  "subtitulo": "El paso por tierra",
+  "voz": "estepa",
+  "territorio": "estepa",
+  "pos": [
+    700,
+    500
+  ],
+  "menor": false,
+  "oficial": "El Callado dice: quien cruza paga, y quien paga cruza. El corredor es el paso por tierra entre la montaña y el mar. Por aquí bajan al delta el acero de la Forja y las compañías que el Marjal contrata, y por aquí suben el grano y la sal.\n\nNingún clan cierra el paso a quien ha pagado. Esa es la palabra dada.",
+  "enlaces": [
+    "estepa-de-kadem",
+    "la-forja",
+    "el-marjal"
+  ]
+}

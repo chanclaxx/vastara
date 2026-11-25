@@ -1,0 +1,15 @@
+{
+  "id": "la-noche-del-solsticio",
+  "tipo": "relato",
+  "titulo": "La noche del solsticio",
+  "subtitulo": "Declaración de Mirela, criada de la Casa Arbelas, recogida por el arciprestazgo",
+  "voz": "solania",
+  "epoca": "banquete",
+  "imagen": "imagenes/epocas/banquete.webp",
+  "oficial": "Yo serví el vino aquella noche. La casa estaba llena de velas y de capas buenas, y el señor Marco brindó por la corona y por la Mirada.\n\nEl bienaventurado Perán Vela comió poco. Lo recuerdo porque le dejé el pan dos veces y dos veces lo devolvió entero. Tenía la mano sobre el pecho, donde llevaba el pliego, como quien guarda un pájaro.\n\nAntes de medianoche salió al patio de las cocinas. Pensé que iba a tomar el aire: hacía calor de tantas velas. Después oí un golpe contra la puerta del huerto y un ruido como de agua que se derrama.\n\nCuando llegamos con las lámparas ya estaba en el suelo. Al otro lado del muro corría uno con capa de barquero. Eso dijeron los mozos, y yo lo creo, porque en el huerto quedó un olor a cieno que no es de nuestra tierra.\n\nEl pliego se abrió esa misma noche, delante de todos. El señor Marco pidió que se leyera en voz alta. Yo no sé leer, pero sé lo que oí: que el coronel Ordaz había vendido la veta al delta.\n\nDesde entonces pongo una vela por él en la ermita del camino. No soy la única.",
+  "verdad": {
+    "por": "pliego-riz",
+    "texto": "«Una hora antes del brindis el mayordomo de la casa retiró la guardia del patio de las cocinas. El patio se quedó sin nadie.»\n\n«A medianoche el Testigo Vela salió solo al patio. Nadie lo había llamado. No llevaba miedo. Llevaba prisa.»\n\nEl pliego no habla de ningún barquero."
+  },
+  "enlaces": ["peran-vela", "marco-de-arbelas", "casa-arbelas", "banquete", "ermita-del-bienaventurado"]
+}

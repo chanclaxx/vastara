@@ -1,0 +1,27 @@
+{
+  "id": "cadaval",
+  "tipo": "epoca",
+  "titulo": "El cierre de Cadaval",
+  "anio": "Año 202",
+  "voz": "solania",
+  "lamina": {
+    "x": 345,
+    "y": 285,
+    "ancho": 150,
+    "pie": "La guardia cierra el camino de la Marca"
+  },
+  "oficial": "Una peste entra en la Marca de Cadaval. La corona cierra la comarca para salvar al altiplano y el coronel Sarmen Ordaz dirige el cierre. Mueren entre cuatro y seis mil personas; todas constan en los registros sanitarios.",
+  "exaltada": {
+    "por": "acta-cavir",
+    "texto": "La peste sube por el río Sied en las barcazas del Marjal. La corona cierra la comarca para salvar al altiplano. Mueren entre cuatro y seis mil personas: las primeras víctimas del delta en esta guerra, doce años antes de que empezara."
+  },
+  "verdad": {
+    "por": "pliego-ambaz",
+    "texto": "«En el otoño del 202 el teniente pagó la prima del cierre de Cadaval: dos sueldos por cabeza, contra recibo de compañía y por orden del coronel Ordaz. Hizo cuatro mil novecientos seis recibos. Ninguno dice peste.»"
+  },
+  "enlaces": [
+    "marca-de-cadaval",
+    "sarmen-ordaz"
+  ],
+  "imagen": "imagenes/epocas/cadaval.webp"
+}

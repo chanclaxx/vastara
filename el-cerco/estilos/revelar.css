@@ -1,0 +1,94 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   REVELAR: el diálogo del código, el sello que se rompe y las capas que cambian.
+   Regla del juego que sigue la web: solo se anima lo que se abre, se enciende o se borra.
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.dialogo-sello {
+  width: min(560px, calc(100% - 32px));
+  max-height: calc(100% - 32px);
+  border: none; padding: 0;
+  background: var(--papel); color: var(--tinta);
+  box-shadow: 0 30px 90px #000000c0, 0 0 160px var(--luz);
+}
+.dialogo-sello::backdrop { background: #0b0806d9; }
+
+.form-sello { padding: 28px 30px 24px; }
+.form-sello h2 { margin: 0 0 6px; font-family: var(--letra-documento); font-weight: normal; font-size: 28px; }
+.form-sello p { margin: 0 0 16px; color: var(--tinta-2); }
+.form-sello input {
+  width: 100%; padding: 12px 14px;
+  font-family: var(--letra-interfaz); font-size: 20px; letter-spacing: 3px; text-transform: uppercase;
+  background: var(--papel-2); color: var(--tinta);
+  border: 1px solid var(--papel-sombra); border-radius: 0;
+}
+.form-sello input:focus { outline: 2px solid var(--tinta-2); outline-offset: 1px; }
+.aviso { min-height: 22px; margin: 10px 0 0 !important; font-style: italic; color: var(--exaltado) !important; }
+.acciones { display: flex; justify-content: flex-end; gap: 10px; margin-top: 12px; }
+.acciones button, .revelacion button.principal {
+  padding: 9px 16px; border: none; background: var(--tinta); color: var(--papel);
+}
+.acciones button.secundario { background: none; color: var(--tinta-2); }
+
+/* ── La revelación ─────────────────────────────────────────────────────────── */
+.revelacion { padding: 30px 30px 26px; position: relative; overflow: hidden; }
+.revelacion .ficha-tipo { margin-top: 4px; }
+.revelacion h2 { margin: 0; font-family: var(--letra-documento); font-weight: normal; font-size: 26px; }
+
+/* El lacre entero, que se parte en dos */
+.lacre { position: relative; width: 76px; height: 76px; margin: 0 auto 18px; }
+.lacre-mitad {
+  position: absolute; top: 0; width: 38px; height: 76px; overflow: hidden;
+}
+.lacre-mitad::before {
+  content: ""; position: absolute; top: 0; width: 76px; height: 76px; border-radius: 50%;
+  background: radial-gradient(circle at 40% 35%, #4a3426, var(--lacre) 70%);
+  box-shadow: 0 3px 8px #00000080;
+}
+.lacre-mitad.izq { left: 0; }
+.lacre-mitad.izq::before { left: 0; }
+.lacre-mitad.der { right: 0; }
+.lacre-mitad.der::before { right: 0; }
+.lacre-ojo { position: absolute; inset: 0; display: grid; place-items: center; pointer-events: none; }
+.lacre-ojo svg { width: 38px; height: 38px; }
+.rompiendo .lacre-mitad.izq { animation: mitad-izq 0.9s 0.5s cubic-bezier(.3,.0,.2,1) forwards; }
+.rompiendo .lacre-mitad.der { animation: mitad-der 0.9s 0.5s cubic-bezier(.3,.0,.2,1) forwards; }
+.rompiendo .lacre-ojo { animation: desvanecer 0.3s 0.5s forwards; }
+.rompiendo .lacre { animation: plegar 0.5s 1.3s forwards; }      /* roto el sello, su hueco se cierra */
+@keyframes plegar { to { height: 0; margin-bottom: 0; } }
+@keyframes mitad-izq { to { transform: translate(-46px, 22px) rotate(-28deg); opacity: 0; } }
+@keyframes mitad-der { to { transform: translate(46px, 26px) rotate(24deg); opacity: 0; } }
+@keyframes desvanecer { to { opacity: 0; } }
+
+/* La hoja se despliega y las líneas aparecen una a una */
+.hoja-revelada { transform-origin: top center; }
+.rompiendo .hoja-revelada { animation: desplegar 0.7s 1.2s both ease-out; }
+@keyframes desplegar { from { transform: scaleY(0.04); opacity: 0; } to { transform: none; opacity: 1; } }
+.rompiendo .hoja-revelada .texto p {
+  animation: tinta 0.8s both ease-out;
+  animation-delay: calc(1.8s + var(--i) * 0.55s);
+}
+@keyframes tinta { from { opacity: 0; filter: blur(3px); } to { opacity: 1; filter: none; } }
+.rompiendo .cambios { animation: tinta 0.8s both; animation-delay: calc(2.2s + var(--n) * 0.55s); }
+
+.revelacion .texto { font-size: 17px; max-height: 42vh; overflow-y: auto; padding-right: 6px; }
+.cambios { margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--papel-sombra); }
+.cambios h3 { margin: 0 0 10px; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--tinta-3); font-weight: normal; }
+.cambios ul { list-style: none; margin: 0 0 16px; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.cambios a { display: inline-block; padding: 5px 11px; border: 1px solid var(--tinta-3); text-decoration: none; font-family: var(--letra-documento); font-size: 15px; }
+.cambios a:hover { background: var(--papel-2); }
+.ya-abierto { font-style: italic; color: var(--tinta-2); margin: 0 0 12px; }
+
+/* ── En la ficha: la primera vez que se ve una capa nueva ─────────────────── */
+.tachando span { animation: tachar 1.4s 0.3s both ease-in-out; }
+@keyframes tachar { from { background-size: 0% 1.4px; } to { background-size: 100% 1.4px; } }
+.tachando { animation: apagar 1.4s 0.3s both; }
+@keyframes apagar { from { color: var(--tinta); } to { color: var(--tinta-3); } }
+.apareciendo { animation: tinta 1s 1.6s both ease-out; }
+
+.sellando { animation: estampar 0.5s 0.2s both cubic-bezier(.2,1.6,.4,1); }
+@keyframes estampar { from { transform: rotate(-2deg) scale(1.8); opacity: 0; } to { transform: rotate(-2deg) scale(1); opacity: 1; } }
+.reescribiendo p { animation: tinta 1.1s both ease-out; animation-delay: calc(0.7s + var(--i) * 0.4s); }
+
+@media (prefers-reduced-motion: reduce) {
+  .rompiendo *, .tachando, .tachando span, .apareciendo, .sellando, .reescribiendo p { animation-duration: 0.01s !important; animation-delay: 0s !important; }
+}

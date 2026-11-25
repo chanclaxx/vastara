@@ -1,0 +1,13 @@
+{
+  "id": "boca-cerrada",
+  "tipo": "costumbre",
+  "titulo": "La Boca Cerrada",
+  "subtitulo": "Tradición de la Estepa de Kadem",
+  "voz": "estepa",
+  "oficial": "El Callado dice: el dios de la estepa nunca habló, y ningún hombre manda con la voz. Quien toma el mando de un clan calla para siempre. Ordena con gestos, y una Lengua sorteada entre las familias los dice en voz alta.\n\nUn Callado puede pronunciar una sola frase en su vida. Esa frase se vuelve ley eterna y le cuesta la vida en el mismo acto. Así nadie acumula poder hablando. La Lengua no manda: solo traduce.",
+  "enlaces": [
+    "estepa-de-kadem",
+    "ruptura"
+  ],
+  "imagen": "imagenes/costumbres/boca-cerrada.webp"
+}

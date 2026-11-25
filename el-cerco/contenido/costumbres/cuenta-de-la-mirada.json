@@ -1,0 +1,14 @@
+{
+  "id": "cuenta-de-la-mirada",
+  "tipo": "costumbre",
+  "titulo": "La Cuenta de la Mirada",
+  "subtitulo": "Tradición de Solania",
+  "voz": "solania",
+  "oficial": "A cada oficial se le sortea un soldado raso, el Testigo, que lo acompaña a todas partes y anota lo que hace en un pliego lacrado. Mientras el Testigo vive, el pliego no se abre. Cuando muere, el sello se rompe y lo escrito se vuelve ley.\n\nLa tropa la ama porque pone a uno de los suyos a vigilar a los poderosos. La corona la honra porque ninguna nobleza puede torcerla. El Testigo es el más humilde de los soldados y el más temido de los hombres.",
+  "enlaces": [
+    "solania",
+    "peran-vela",
+    "pliego-peran"
+  ],
+  "imagen": "imagenes/costumbres/cuenta-de-la-mirada.webp"
+}

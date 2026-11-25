@@ -1,0 +1,19 @@
+{
+  "id": "archivo-de-nombres",
+  "tipo": "lugar",
+  "titulo": "Archivo de nombres",
+  "subtitulo": "El Marjal · detrás de Vedre",
+  "voz": "marjal",
+  "territorio": "marjal",
+  "pos": [
+    214,
+    588
+  ],
+  "menor": false,
+  "oficial": "En los palafitos más viejos del delta, detrás de Vedre, está el registro de nombres: cordeles anudados por las cantoras, uno por cada muerte de Vástara desde el año 0. No hay papel. Hay memoria y nudos.\n\nNadie ha podido falsificarlo nunca. Por eso lo quieren abrir.",
+  "enlaces": [
+    "deuda-de-nombres",
+    "adne-sarrio",
+    "esclusa-de-vedre"
+  ]
+}

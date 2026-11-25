@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plataforma Principal — Vástara: la Esclusa</title>
+  <meta name="description" content="Primera versión de la plataforma principal del proyecto transmedia Vástara: el videojuego Vástara: la Esclusa y su web conectada, El Cerco.">
+  <meta property="og:title" content="Plataforma Principal — Vástara: la Esclusa">
+  <meta property="og:description" content="Un videojuego de defensa por oleadas en primera persona y una web de lore que se desbloquea con lo que decides al jugar.">
+  <meta property="og:image" content="../img/portada_sala.jpg">
+  <link rel="stylesheet" href="../estilo.css">
+</head>
+<body>
+
+<header class="barra">
+  <a class="marca" href="../">Vástara <small>Bitácora del proyecto transmedia</small></a>
+  <nav aria-label="Enlaces">
+    <a href="#juego">El juego</a>
+    <a href="#acceso">Cómo jugar</a>
+    <a href="../el-cerco/">El Cerco</a>
+  </nav>
+</header>
+
+<div class="portada" style="background-image:url('../img/portada_sala.jpg')">
+  <div class="dentro">
+    <p class="antetitulo">Entrada · Plataforma Principal</p>
+    <h1>Vástara: la Esclusa</h1>
+    <p class="entradilla">Defiendes una isla sin ejército. Cada oleada se paga en vidas, y la verdad de por qué
+      mueren solo la cuentan los testigos que tú decides matar.</p>
+    <div class="meta">
+      <span>Miguel Ángel Jiménez y Alejandro González</span>
+      <span>24 de noviembre de 2026</span>
+      <span>Videojuego para PC (Windows) · Unity 6</span>
+    </div>
+  </div>
+</div>
+
+<main class="papel">
+<div class="columna">
+
+  <ul class="indice" aria-label="Contenido de la entrada">
+    <li><a href="#presentacion">A · Presentación</a></li>
+    <li><a href="#juego">B · Primera versión</a></li>
+    <li><a href="#acceso">C · Instrucciones de acceso</a></li>
+    <li><a href="#estado">D · Estado de desarrollo</a></li>
+    <li><a href="#autoria">E · Autoría y recursos</a></li>
+  </ul>
+
+  <!-- ═══════════════════════ A ═══════════════════════ -->
+  <section id="presentacion">
+    <p class="letra">A · Presentación del proyecto</p>
+    <h2>Un factor, una esclusa y una guerra que se paga por adelantado</h2>
+
+    <dl class="ficha">
+      <dt>Proyecto</dt><dd><b>Vástara</b>, universo transmedia</dd>
+      <dt>Plataforma principal</dt><dd><b>Videojuego</b> · <i>Vástara: la Esclusa</i> (PC, Windows, Unity 6 HDRP)</dd>
+      <dt>Plataforma conectada</dt><dd><b>Sitio web interactivo</b> · <a href="../el-cerco/"><i>El Cerco</i>, archivo público de Vástara</a></dd>
+      <dt>Género</dt><dd>Estrategia y defensa por oleadas, en primera persona</dd>
+      <dt>Equipo</dt><dd>Miguel Ángel Jiménez · Alejandro González</dd>
+    </dl>
+
+    <p class="capital">Vástara son cuatro tierras alrededor de una falla y doscientos catorce años de paz vigilada. La
+      paz depende del <strong>Ícor</strong>, un recurso que solo sabe refinar la Forja, una liga de gremios sin rey que
+      vende a todos los bandos. Antes de cada campaña, la Forja publica su <strong>cuota</strong>: el número exacto
+      de vidas que va a costar, grabado en una placa y firmado por quien lo calculó.</p>
+
+    <p>El jugador es <strong>Halcé Vedrani</strong>, factor de una casa de comerciantes del delta, un hombre de cuentas y no
+      de armas. Le han confiado la <strong>Esclusa de Vedre</strong>, la llave del delta, justo cuando la Casa Arbelas
+      la sitia. Halcé no tiene ejército: tiene crédito, compañías pagadas y unas pocas gotas de Ícor.</p>
+
+    <p class="cita">«Todo tiene un precio. Lo difícil es saber quién lo paga.» — Halcé Vedrani</p>
+
+    <p><strong>La experiencia:</strong> desde una sala de piedra preparas cada oleada en una mesa de mando. Luego
+      vives el asalto en primera persona en los cuatro puntos a la vez: disparas el cañón del Canal y la bombarda de la
+      Muralla, das cuerda a la compuerta de la Esclusa y vigilas la puerta trasera. Si cae un solo frente, cae la isla. Después
+      del asalto llegan las cuentas: cobras, reparas y decides qué hacer con un prisionero enemigo y su
+      <strong>Testigo</strong>.</p>
+
+    <p>En Vástara, un Testigo lleva un pliego sellado con lo que vio. La ley dice que el sello solo se abre si el Testigo
+      muere. Por eso la verdad del mundo tiene un precio: para leerla hay que matar a quien la sabe. El juego te hace pagarlo. El
+      pliego te da un código, y ese código abre la verdad en la web <i>El Cerco</i>.</p>
+
+    <h3>Personajes</h3>
+    <div class="reparto">
+      <div><b>Halcé Vedrani</b><span>El jugador. Factor de la Casa Vedrani; defiende la Esclusa pagando.</span></div>
+      <div><b>Yaruk Dessan</b><span>Sargento de una compañía esteparia a sueldo. Trae los partes y a los prisioneros.</span></div>
+      <div><b>Adné Sarrio</b><span>Cantora de la orden de Ysmé. Canta a los muertos de los dos bandos y te vende el Ícor.</span></div>
+      <div><b>Sedal y Cavir</b><span>Oficiales enemigos capturados. Cada uno llega con su Testigo: Tobal Riz y Ruel Ambaz.</span></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ B ═══════════════════════ -->
+  <section id="juego">
+    <p class="letra">B · Primera versión de la plataforma</p>
+    <h2>La demo: dos oleadas completas</h2>
+
+    <p>La primera versión es un <strong>prototipo jugable</strong> con el ciclo entero de dos oleadas. Se puede descargar
+      y jugar en Windows. Si no tienes Windows, el video de abajo muestra el gameplay real.</p>
+
+    <div class="acciones">
+      <a class="boton" href="https://github.com/chanclaxx/vastara/releases/download/v0.1-demo/Vastara_LaEsclusa_Demo_Windows.zip">
+        ⬇ Descargar la demo <small>Windows · .zip · 180 MB</small></a>
+      <a class="boton claro" href="../el-cerco/">Abrir El Cerco →</a>
+    </div>
+
+    <h3>El ciclo de una oleada</h3>
+    <ol class="pasos">
+      <li><b>Parte</b><span>Yaruk informa: cuántos barcos vienen y por dónde.</span></li>
+      <li><b>Preparación</b><span>Pagas a las compañías y repartes la tropa en la maqueta.</span></li>
+      <li><b>Asalto</b><span>Cinco minutos y cuatro frentes a la vez, en primera persona.</span></li>
+      <li><b>Recuento</b><span>Cobras, reparas y recibes al prisionero.</span></li>
+      <li><b>Trato</b><span>Adné sube por la escalera del agua y te vende Ícor.</span></li>
+    </ol>
+
+    <figure class="medio ancho">
+      <video controls preload="metadata" poster="../img/poster_gameplay_oleada.jpg">
+        <source src="../media/gameplay_oleada.mp4" type="video/mp4">
+      </video>
+      <figcaption><b>Gameplay real, una oleada de principio a fin (2:44).</b> Grabado en Unity con la interfaz del juego. Los
+        rótulos de la franja inferior se añadieron en el montaje para explicar cada mecánica.</figcaption>
+    </figure>
+
+    <div class="galeria">
+      <figure><img src="../img/juego_1.jpg" alt="La mesa de mando con la maqueta de la isla y las fichas de tropa" loading="lazy"><figcaption>La mesa de mando y la maqueta</figcaption></figure>
+      <figure><img src="../img/juego_2.jpg" alt="Yaruk de pie en la sala durante la preparación" loading="lazy"><figcaption>Yaruk, durante la preparación</figcaption></figure>
+      <figure><img src="../img/juego_3.jpg" alt="Vista desde la nave del Canal apuntando con el cañón" loading="lazy"><figcaption>Canal: el cañón de tu nave</figcaption></figure>
+      <figure><img src="../img/juego_4.jpg" alt="Disparo de la bombarda en la Muralla de Agua" loading="lazy"><figcaption>Muralla: la bombarda</figcaption></figure>
+      <figure><img src="../img/juego_5.jpg" alt="La Esclusa Interior a oscuras con la rueda de la compuerta" loading="lazy"><figcaption>Esclusa: la cuerda de la compuerta</figcaption></figure>
+      <figure><img src="../img/juego_6.jpg" alt="La puerta trasera cerrada durante el asalto" loading="lazy"><figcaption>La puerta trasera</figcaption></figure>
+      <figure><img src="../img/juego_7.jpg" alt="Silueta del prisionero vista por la mirilla" loading="lazy"><figcaption>La mirilla: la decisión, en sombras</figcaption></figure>
+      <figure><img src="../img/juego_8.jpg" alt="El pliego del Testigo con su número de archivo" loading="lazy"><figcaption>El pliego y su código</figcaption></figure>
+    </div>
+
+    <h3>Pitch del proyecto</h3>
+    <figure class="medio">
+      <video controls preload="metadata" poster="../img/poster_pitch.jpg">
+        <source src="../media/pitch.mp4" type="video/mp4">
+      </video>
+      <figcaption><b>Pitch (2 min).</b> El universo, el conflicto y cómo se conectan el juego y la web, contado por nosotros.</figcaption>
+    </figure>
+
+    <h3>El Cerco: la otra mitad de la historia</h3>
+    <p>El Cerco es el archivo público de Vástara: una enciclopedia escrita <strong>en la voz oficial de cada pueblo</strong>,
+      con su versión de los hechos. Tiene un mapa en relieve que cambia con las épocas, una crónica que se lee como un
+      libro, relatos, las cinco tierras, los personajes y sus costumbres. Todo lo que cuenta es la versión
+      oficial y está incompleto a propósito.</p>
+    <p>Cuando escribes un código del juego en <b>«Romper un sello»</b>, el lacre estalla, la frase oficial se tacha y
+      aparece lo que vio el Testigo. Pero si en el juego ahorcaste al oficial en vez de matar al Testigo, te llega un
+      <b>acta de martirio</b>, y su código hace que la web mienta todavía más.</p>
+
+    <ol class="pasos">
+      <li><b>En el juego</b><span>Decides qué hacer con el prisionero y su Testigo.</span></li>
+      <li><b>El pliego</b><span>Si matas al Testigo, su pliego se abre y lleva un número. Arde tras leerse.</span></li>
+      <li><b>En la web</b><span>Escribes el número en «Romper un sello».</span></li>
+      <li><b>El desmentido</b><span>La historia oficial se tacha y se reescribe con la verdad.</span></li>
+    </ol>
+
+    <figure class="medio">
+      <video controls muted loop playsinline preload="metadata" poster="../img/cerco_portada.jpg">
+        <source src="../media/cerco_sello.mp4" type="video/mp4">
+      </video>
+      <figcaption><b>Romper un sello en El Cerco (29 s).</b> Se escribe el código del pliego de Ruel Ambaz y la frase oficial se hace ceniza.</figcaption>
+    </figure>
+
+    <div class="galeria">
+      <figure><img src="../img/cerco_portada.jpg" alt="Prólogo de El Cerco con el título Vástara" loading="lazy"><figcaption>El prólogo</figcaption></figure>
+      <figure><img src="../img/cerco_mapa.jpg" alt="Mapa en relieve de Vástara con la cronología" loading="lazy"><figcaption>El mapa en relieve, por épocas</figcaption></figure>
+      <figure><img src="../img/cerco_libro.jpg" alt="La crónica presentada como un libro abierto" loading="lazy"><figcaption>La crónica, como un libro</figcaption></figure>
+      <figure><img src="../img/cerco_territorio.jpg" alt="Página de la tierra del Marjal" loading="lazy"><figcaption>Una tierra: el Marjal</figcaption></figure>
+    </div>
+
+    <h3>Teaser cinemático</h3>
+    <figure class="medio">
+      <video controls preload="metadata" poster="../img/poster_teaser.jpg">
+        <source src="../media/teaser.mp4" type="video/mp4">
+      </video>
+      <figcaption><b>Teaser (1:43).</b> Recreado en Blender sobre los escenarios del juego: la noche antes del asalto, la
+        guerra en los frentes y la maqueta de la mesa. No es gameplay: es la promesa de la atmósfera.</figcaption>
+    </figure>
+
+    <h3>Del tratamiento a la pantalla</h3>
+    <table>
+      <thead><tr><th>Decisión del tratamiento</th><th>Cómo se ve en la plataforma</th></tr></thead>
+      <tbody>
+        <tr><td>El precio de la guerra es una cifra</td><td>La placa de cuota preside la sala, y cada orden se paga con crédito o con Ícor. Cada pago suena y se ve.</td></tr>
+        <tr><td>La verdad cuesta una vida</td><td>Para leer un pliego hay que matar al Testigo. La web solo revela lo que el jugador pagó en el juego.</td></tr>
+        <tr><td>Gastado · registrado · marcado</td><td>Todo en la sala está usado, salvo la placa y las gotas de Ícor, que son lo único que entregó la Forja.</td></tr>
+        <tr><td>Un único rojo</td><td>Paleta gris y parda. El rojo incandescente solo aparece en el Ícor, que es lo que se compra con muertos.</td></tr>
+        <tr><td>Luz solo sobre lo que importa</td><td>Los faroles alumbran las estaciones de trabajo (mesa, placa, registro, puertas) y el resto de la sala queda a oscuras.</td></tr>
+        <tr><td>La historia oficial miente</td><td>El Cerco está escrito en la voz de cada pueblo. Los pliegos la desmienten y las actas la exageran.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ═══════════════════════ C ═══════════════════════ -->
+  <section id="acceso">
+    <p class="letra">C · Instrucciones de acceso</p>
+    <h2>Cómo vivirlo por primera vez</h2>
+
+    <h3>Si tienes 10 minutos y Windows: juega</h3>
+    <ol>
+      <li><a href="https://github.com/chanclaxx/vastara/releases/download/v0.1-demo/Vastara_LaEsclusa_Demo_Windows.zip">Descarga el .zip</a>
+        y descomprímelo entero en una carpeta. No lo abras desde dentro del .zip.</li>
+      <li>Abre <code>Vastara.exe</code>. Windows puede avisar de que la aplicación es desconocida porque no está firmada:
+        pulsa <b>Más información → Ejecutar de todas formas</b>.</li>
+      <li>Sigue la guía de la parte superior de la pantalla. Siempre indica la fase actual y qué hacer a continuación.</li>
+    </ol>
+
+    <table>
+      <thead><tr><th>Acción</th><th>Control</th></tr></thead>
+      <tbody>
+        <tr><td>Ir a una estación de la sala</td><td>Clic sobre ella, o las teclas <kbd>1</kbd>–<kbd>8</kbd></td></tr>
+        <tr><td>Volver atrás</td><td>Clic derecho o <kbd>Espacio</kbd></td></tr>
+        <tr><td>Coger y soltar fichas o bolsas en la mesa</td><td>Mantener clic izquierdo y arrastrar</td></tr>
+        <tr><td>Ver la ayuda de la fase</td><td>Mantener <kbd>H</kbd></td></tr>
+        <tr><td>En un frente: mirar</td><td>Clic derecho y arrastrar, o <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> / flechas</td></tr>
+        <tr><td>En un frente: disparar o actuar</td><td>Clic izquierdo (en la Esclusa, mantenerlo sobre la rueda)</td></tr>
+        <tr><td>En un frente: asomarse / cubrirse</td><td>Mantener <kbd>Espacio</kbd> / <kbd>C</kbd></td></tr>
+        <tr><td>En un frente: volver a la sala</td><td><kbd>Tab</kbd> o <kbd>Esc</kbd></td></tr>
+        <tr><td>Abrir puertas · soltar el pliego</td><td><kbd>E</kbd> o clic</td></tr>
+        <tr><td>Salir del juego</td><td><kbd>Alt</kbd> + <kbd>F4</kbd></td></tr>
+      </tbody>
+    </table>
+
+    <div class="aviso">
+      <p><b>Requisitos:</b> Windows 10 u 11 de 64 bits, tarjeta gráfica con DirectX 12 (recomendada GTX 1060 o superior),
+        unos 600 MB libres. Funciona con teclado y ratón.</p>
+      <p><b>Importante:</b> cuando leas el pliego del Testigo, <b>apunta su número</b> antes de soltarlo, porque arde y no vuelve.</p>
+    </div>
+
+    <h3>Si no puedes jugar: mira y luego explora</h3>
+    <ol>
+      <li>Mira el <a href="#juego">video de gameplay</a> (2:44). Al final aparece un pliego con su número de archivo:
+        <span class="codigo">SELLO-AMBAZ-2290</span>.</li>
+      <li>Abre <a href="../el-cerco/">El Cerco</a> en un ordenador (también funciona en el móvil, pero el mapa se disfruta más en pantalla grande).</li>
+      <li>Recorrido sugerido: el <b>prólogo</b> → el <b>Mapa</b> (mueve la cronología de abajo y acércate con la rueda) →
+        la <b>Historia</b>, que se lee como un libro → una <b>tierra</b> y sus <b>personajes</b>.</li>
+      <li>Pulsa <b>«Romper un sello»</b> arriba a la derecha y escribe el código del video. Luego vuelve a la página de
+        <b>Cadaval</b> o de <b>la Forja</b> y compara lo que decía antes con lo que dice ahora.</li>
+    </ol>
+  </section>
+
+  <!-- ═══════════════════════ D ═══════════════════════ -->
+  <section id="estado">
+    <p class="letra">D · Estado de desarrollo</p>
+    <h2>Lo que ya existe y lo que falta</h2>
+
+    <table>
+      <thead><tr><th>Componente</th><th>Estado</th></tr></thead>
+      <tbody>
+        <tr><td>Sala de mando</td><td><span class="estado-si">Construida.</span> Modelada en Blender, con luz horneada en HDRP y estaciones con interacción (mesa, placa, tinaja, registro y puertas).</td></tr>
+        <tr><td>Ciclo de juego</td><td><span class="estado-si">Completo.</span> Parte, preparación, asalto, recuento, prisionero y trato, durante dos oleadas.</td></tr>
+        <tr><td>Asalto</td><td><span class="estado-si">Jugable.</span> Canal, Muralla, Esclusa y puerta trasera a la vez, unos 5 minutos por oleada.</td></tr>
+        <tr><td>Prisioneros y Testigos</td><td><span class="estado-si">Jugable.</span> Dos oficiales con sus Testigos y tres decisiones cada uno (interrogar, ahorcar o matar al Testigo).</td></tr>
+        <tr><td>Personajes</td><td><span class="estado-si">En escena.</span> Yaruk y Adné, animados; Halcé en primera persona, con sus manos.</td></tr>
+        <tr><td>Conexión con la web</td><td><span class="estado-si">Funciona.</span> Cuatro códigos (dos pliegos y dos actas) probados de punta a punta.</td></tr>
+        <tr><td>El Cerco</td><td><span class="estado-si">Publicada.</span> Mapa 3D, crónica en 7 épocas, 3 relatos, 5 tierras, 7 personajes, 4 costumbres y archivo de pliegos.</td></tr>
+        <tr><td>Sonido del juego</td><td><span class="estado-no">Provisional.</span> Efectos sintetizados por código. Sin voces: los diálogos van con subtítulos.</td></tr>
+        <tr><td>Juego completo</td><td><span class="estado-no">Pendiente.</span> La demo tiene 2 de las 6 oleadas previstas.</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Qué puede experimentar hoy la audiencia</h3>
+    <p>Una partida completa de dos oleadas, de unos 20 minutos, con victoria o derrota. Al final de cada oleada puede tomar
+      una decisión moral cuyo resultado sale del juego y cambia lo que cuenta la web.</p>
+
+    <h3>Limitaciones de esta primera versión</h3>
+    <ul>
+      <li><b>Solo Windows</b> y con una tarjeta gráfica decente. No hay versión para navegador ni para Mac, por eso
+        añadimos el video de gameplay.</li>
+      <li><b>No hay menú principal ni opciones:</b> la partida empieza directamente en la primera oleada.</li>
+      <li>El <b>sonido es provisional</b> y no hay voces. Los personajes hablan por subtítulos.</li>
+      <li>La dificultad está calibrada con simulaciones y pocas pruebas con personas. La segunda oleada puede ser dura.</li>
+      <li>El Cerco solo desbloquea los pliegos de los <b>dos</b> prisioneros de la demo. Los demás aparecen en el archivo como lacrados.</li>
+      <li>El teaser cinemático se hizo en Blender y anticipa el tono, no es gameplay.</li>
+    </ul>
+  </section>
+
+  <!-- ═══════════════════════ E ═══════════════════════ -->
+  <section id="autoria">
+    <p class="letra">E · Autoría y recursos</p>
+    <h2>Quién lo hizo y con qué</h2>
+
+    <p><b>Equipo:</b> Miguel Ángel Jiménez y Alejandro González.</p>
+
+    <h3>Creación original del equipo</h3>
+    <ul>
+      <li><b>Universo y narrativa:</b> la Biblia transmedia, las cuatro civilizaciones, los personajes, los textos del juego y
+        todo el contenido de El Cerco (crónica, relatos, fichas, pliegos y actas).</li>
+      <li><b>Diseño del juego:</b> el ciclo por oleadas, la economía de crédito e Ícor, los cuatro frentes, la regla del
+        Testigo y los códigos que unen el juego y la web.</li>
+      <li><b>Arte 3D:</b> la sala, la maqueta, los frentes y los personajes (modelado, texturizado y luz en Blender), y la
+        dirección visual del documento <i>Visual DNA</i>.</li>
+      <li><b>Programación:</b> la lógica del juego en C# (Unity 6 HDRP) y la web en HTML, CSS y JavaScript sin frameworks.</li>
+      <li><b>Mapa de El Cerco:</b> un relieve generado por script en Blender a partir de la geografía del mundo.</li>
+      <li><b>Audiovisual:</b> el guion y el montaje del pitch y del teaser, y la grabación del gameplay.</li>
+    </ul>
+
+    <h3>Recursos de terceros</h3>
+    <ul>
+      <li><b>Barcos y bombarda</b> (Sketchfab, licencia CC-BY 4.0), adaptados a la paleta del juego: <i>Dromon medieval ship</i>
+        (Mitro123), <i>Portuguese Carrack</i> y <i>Cog 02</i> (gogiart), <i>Nao Victoria Galleon Ship</i> (Javier López
+        Cuadrado) y <i>medieval Bombarde</i> (Götz von Berlichingen).</li>
+      <li><b>Animaciones base</b> de Mixamo (Adobe), retocadas a mano con una capa de carácter propia.</li>
+      <li><b>Texturas de material</b> de ambientCG y Poly Haven (CC0).</li>
+      <li><b>Tipografías:</b> IM Fell English (Igino Marini) y Alegreya Sans (Huerta Tipográfica), ambas con licencia SIL Open Font.</li>
+      <li><b>Motores y herramientas:</b> Unity 6, Blender y FFmpeg.</li>
+    </ul>
+
+    <h3>Uso de inteligencia artificial</h3>
+    <ul>
+      <li><b>Ilustraciones de El Cerco</b> (retratos, épocas, territorios y costumbres): generadas con Gemini (Google) y ChatGPT
+        (OpenAI) a partir de prompts escritos por el equipo, con la estética de <i>Arcane</i> como referencia. Después las
+        recortamos y adaptamos a la papelería de la web.</li>
+      <li><b>Música y efectos</b> del pitch y del teaser: generados con ElevenLabs a partir de un plan de composición por escenas
+        que escribimos nosotros.</li>
+      <li><b>Modelos base de personaje:</b> la armadura de Yaruk parte de un modelo generado con IA (Tripo) y publicado en
+        Sketchfab. Lo rehicimos en Blender: topología, ropa, cara, pelo y texturas pintadas.</li>
+      <li><b>Programación y scripts:</b> desarrollados con asistencia de IA (Claude, de Anthropic). Las decisiones de diseño,
+        la revisión y las pruebas en el juego son del equipo.</li>
+    </ul>
+  </section>
+
+</div>
+</main>
+
+<footer class="pie">
+  <p>Vástara · Proyecto transmedia · Miguel Ángel Jiménez y Alejandro González · 2026</p>
+  <p><a href="../">Volver a la bitácora</a> · <a href="../el-cerco/">El Cerco</a> ·
+    <a href="https://github.com/chanclaxx/vastara/releases/tag/v0.1-demo">Descarga de la demo</a></p>
+</footer>
+
+</body>
+</html>

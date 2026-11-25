@@ -1,0 +1,28 @@
+{
+  "id": "casa-arbelas",
+  "tipo": "lugar",
+  "titulo": "Casa Arbelas",
+  "subtitulo": "Solania",
+  "voz": "solania",
+  "territorio": "solania",
+  "pos": [
+    390,
+    178
+  ],
+  "menor": false,
+  "oficial": "Casa grande del altiplano, de larga tradición militar. En su residencia se celebró el banquete del solsticio del 214, donde el Testigo Perán Vela fue degollado por manos pagadas desde el delta. La casa abrió sus puertas a la investigación, y la corona le confió después la gobernación de Cadaval, vacante tras la ejecución de Ordaz.",
+  "exaltada": {
+    "por": "acta-sedal",
+    "texto": "Casa mártir del altiplano. En su mesa cayó el bienaventurado Perán Vela, y de su guardia salió el alférez Bruno Sedal, ahorcado por los mercaderes del delta en la Esclusa de Vedre. Dos veces ha pagado sangre la Casa Arbelas por la verdad de Solania."
+  },
+  "verdad": {
+    "por": "pliego-riz",
+    "texto": "«Una hora antes del brindis el mayordomo de la casa retiró la guardia del patio de las cocinas. El alférez preguntó por qué y le dijeron que eran órdenes de la casa. El patio se quedó sin nadie. El alférez no lo informó.»"
+  },
+  "enlaces": [
+    "banquete",
+    "marco-de-arbelas",
+    "peran-vela",
+    "marca-de-cadaval"
+  ]
+}

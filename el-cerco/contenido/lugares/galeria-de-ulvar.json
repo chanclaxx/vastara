@@ -1,0 +1,19 @@
+{
+  "id": "galeria-de-ulvar",
+  "tipo": "lugar",
+  "titulo": "Ulvar, la galería de las placas",
+  "subtitulo": "La Forja · galería del sur",
+  "voz": "forja",
+  "territorio": "forja",
+  "pos": [
+    880,
+    250
+  ],
+  "menor": true,
+  "oficial": "Taller donde se funden y graban las placas de cuota. Cada placa lleva la cifra, la obra y la firma del maestre que la calculó; el bronce se pule para que nadie pueda decir que no supo leerla.\n\nEn 214 años, Ulvar ha grabado 11.382 placas. Ninguna cifra ha tenido que corregirse.",
+  "enlaces": [
+    "registro-de-costo",
+    "emeric-sault",
+    "la-forja"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "id": "esclusa-de-vedre",
+  "tipo": "lugar",
+  "titulo": "Esclusa de Vedre",
+  "subtitulo": "El Marjal · cabeza del delta",
+  "voz": "marjal",
+  "territorio": "marjal",
+  "pos": [
+    338,
+    470
+  ],
+  "menor": false,
+  "oficial": "Isla fortificada que cierra el último tramo del Sied antes del delta, y con él el canal hacia el archivo de nombres. La Casa Vedrani la sostiene con compañías de la estepa y con la milicia de los palafitos.\n\nMientras Vedre aguante, el archivo no se abre.",
+  "exaltada": {
+    "por": "acta-sedal",
+    "texto": "La horca de Vedre. En esta isla los mercaderes del delta colgaron al alférez Bruno Sedal sin juicio y sin canto, y lo dejaron a la vista de la vanguardia. La sostiene la Casa Vedrani, la misma que compró durante cinco años el Ícor de Cadaval. El arciprestazgo da fe."
+  },
+  "enlaces": [
+    "halce-vedrani",
+    "archivo-de-nombres",
+    "rio-sied",
+    "vigilia"
+  ]
+}

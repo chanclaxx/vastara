@@ -1,0 +1,19 @@
+{
+  "id": "faro-de-la-boca",
+  "tipo": "lugar",
+  "titulo": "Faro de la Boca",
+  "subtitulo": "El Marjal · la desembocadura del Sied",
+  "voz": "marjal",
+  "territorio": "marjal",
+  "pos": [
+    152,
+    586
+  ],
+  "menor": true,
+  "oficial": "La torre de piedra que guía a los barcos hasta la boca del Sied. Su fuego no se apaga nunca, y el consejo de casas paga al farero por noche encendida.\n\nDesde que empezó el asedio, el farero apaga la luz dos horas cada noche. Nadie sabe quién le paga esas dos horas.",
+  "enlaces": [
+    "puerto-de-lirn",
+    "rio-sied",
+    "vigilia"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "el-marjal",
+  "tipo": "faccion",
+  "titulo": "El Marjal",
+  "subtitulo": "El delta · Ysmé, la que Recuerda",
+  "lema": "Ningún nombre se pierde. Toda deuda se canta.",
+  "voz": "marjal",
+  "oficial": "Delta de canales y palafitos, con el único puerto de mar del continente. Lo gobierna un consejo de casas mercantiles, y ninguna puede heredar, comerciar ni ocupar cargo mientras deba un solo nombre: en el Marjal toda muerte se canta, la del amigo y la del enemigo. Por eso el archivo del delta es el único registro completo de Vástara, y por eso lo custodian las cantoras de Ysmé, que no poseen nada y no pueden ser compradas.\n\nEl Marjal no tiene ejército ni lo ha necesitado en doscientos catorce años. Paga a quien lo defienda y canta a quien muera defendiéndolo.",
+  "exaltada": {
+    "por": "acta-cavir",
+    "texto": "Un consejo de usureros sentado sobre el único puerto del continente. El Marjal no tiene ejército porque no tiene a nadie dispuesto a morir por él: compra hombres de la estepa y los paga con lo que roba. En la Esclusa de Vedre ahorcó al teniente Osmar Cavir, pagador de la vanguardia, y se quedó con el cofre de la soldada.\n\nPresume de cantar a todos sus muertos. Lo que no canta es lo que compra: los Silencios, nombres borrados a precio fijo. Esa es la verdadera razón por la que se niega a abrir su registro."
+  },
+  "enlaces": [
+    "deuda-de-nombres",
+    "esclusa-de-vedre",
+    "archivo-de-nombres",
+    "halce-vedrani",
+    "teodra-vedrani",
+    "adne-sarrio"
+  ],
+  "imagen": "imagenes/territorios/el-marjal.webp"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "salinas-de-maro",
+  "tipo": "lugar",
+  "titulo": "Salinas de Maro",
+  "subtitulo": "El Marjal · la orilla del sur",
+  "voz": "marjal",
+  "territorio": "marjal",
+  "pos": [
+    365,
+    668
+  ],
+  "menor": true,
+  "oficial": "Balsas de sal en la orilla del sur, donde el agua del delta se queda quieta. La sal de Maro conserva el pescado del Marjal y la carne de la vanguardia por igual: el consejo de casas la vende a quien la paga.\n\nLas balsas se cuentan por cientos. Las cuenta la Casa Vedrani, que tiene la mitad.",
+  "enlaces": [
+    "el-marjal",
+    "teodra-vedrani"
+  ]
+}

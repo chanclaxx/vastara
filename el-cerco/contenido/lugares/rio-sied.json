@@ -1,0 +1,19 @@
+{
+  "id": "rio-sied",
+  "tipo": "lugar",
+  "titulo": "Río Sied",
+  "subtitulo": "Del altiplano al delta",
+  "voz": "marjal",
+  "territorio": "marjal",
+  "pos": [
+    300,
+    520
+  ],
+  "menor": false,
+  "oficial": "El río que baja del altiplano, cruza la Cuenca del Cerco y se abre en el delta en cien canales. Por él viajan desde siempre el grano de Solania hacia el puerto y el acero de la Forja hacia todos. Las casas del delta cobran el flete y cantan a quien se ahoga en él.\n\nSu último tramo antes del delta lo cierra la Esclusa de Vedre.",
+  "enlaces": [
+    "esclusa-de-vedre",
+    "marca-de-cadaval",
+    "el-marjal"
+  ]
+}

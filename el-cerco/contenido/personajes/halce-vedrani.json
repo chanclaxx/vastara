@@ -1,0 +1,42 @@
+{
+  "id": "halce-vedrani",
+  "tipo": "personaje",
+  "titulo": "Halcé Vedrani",
+  "subtitulo": "Factor mayor de la Casa Vedrani",
+  "frase": "Todo tiene un precio. Lo difícil es saber quién lo paga.",
+  "voz": "marjal",
+  "faccion": "el-marjal",
+  "oficial": "Factor mayor de la Casa Vedrani, treinta y cinco años, hombre de cuentas y no de armas. La casa le confió la Esclusa de Vedre porque nadie sabe mejor que él lo que cuesta cada barcaza, cada compañía y cada gota.\n\nDefiende el delta sin ejército, que es como el Marjal lo ha defendido siempre todo: pagando bien y cantando a sus muertos.",
+  "exaltada": {
+    "por": "acta-sedal",
+    "texto": "El contrabandista de Cadaval. Durante cinco años bajó por el Sied el Ícor robado a Solania; hoy cuelga en Vedre a los soldados que vienen a pedirle cuentas.\n\nFue él quien ordenó ahorcar al alférez Bruno Sedal."
+  },
+  "enlaces": [
+    "teodra-vedrani",
+    "esclusa-de-vedre",
+    "el-marjal"
+  ],
+  "imagen": "imagenes/personajes/halce-vedrani.webp",
+  "red": [
+    {
+      "id": "teodra-vedrani",
+      "como": "La cabeza de su casa"
+    },
+    {
+      "id": "esclusa-de-vedre",
+      "como": "La esclusa que defiende"
+    },
+    {
+      "id": "adne-sarrio",
+      "como": "Canta a los muertos de su esclusa"
+    },
+    {
+      "id": "marco-de-arbelas",
+      "como": "Manda la vanguardia que la asedia"
+    },
+    {
+      "id": "emeric-sault",
+      "como": "Firmó la cuota del asedio"
+    }
+  ]
+}

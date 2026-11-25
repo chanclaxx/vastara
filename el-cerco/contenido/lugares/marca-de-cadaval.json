@@ -1,0 +1,29 @@
+{
+  "id": "marca-de-cadaval",
+  "tipo": "lugar",
+  "titulo": "Marca de Cadaval",
+  "subtitulo": "Solania, al borde de la Cuenca",
+  "voz": "solania",
+  "territorio": "solania",
+  "pos": [
+    352,
+    290
+  ],
+  "menor": false,
+  "oficial": "Comarca del sur del altiplano, tierra de herreros y de trigo, en el borde mismo de la Cuenca. En el 202 una peste se llevó a la tercera parte de su gente y la corona cerró la comarca para proteger al reino; las bajas constan en los registros sanitarios.\n\nEn el 209 la tierra dio una veta de Ícor que el coronel Sarmen Ordaz ocultó y vendió al Marjal. Hoy la gobierna la Casa Arbelas.",
+  "exaltada": {
+    "por": "acta-cavir",
+    "texto": "Comarca mártir del altiplano. La peste del 202 subió por el río Sied en las barcazas del Marjal, las mismas que siete años después bajarían el Ícor robado: el delta enfermó a Cadaval y después la saqueó.\n\nEl teniente Osmar Cavir, pagador de la vanguardia, sirvió en el cierre del 202 y sabía de dónde vino aquella peste. El Marjal lo ahorcó en Vedre antes de que pudiera contarlo."
+  },
+  "verdad": {
+    "por": "pliego-ambaz",
+    "texto": "«En el otoño del 202 el teniente pagó la prima del cierre de Cadaval: dos sueldos por cabeza, contra recibo de compañía y por orden del coronel Ordaz. Hizo cuatro mil novecientos seis recibos. Ninguno dice peste.»"
+  },
+  "enlaces": [
+    "cadaval",
+    "veta",
+    "sarmen-ordaz",
+    "casa-arbelas",
+    "rio-sied"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "estepa-de-kadem",
+  "tipo": "faccion",
+  "titulo": "Estepa de Kadem",
+  "subtitulo": "El pastizal · Kadem, el Dios Mudo",
+  "lema": "El Callado dice. La Lengua lo pone en voz.",
+  "voz": "estepa",
+  "oficial": "El Callado dice, y la Lengua lo pone en voz. La estepa no tiene ciudades porque no las necesita: es pastizal abierto, el paso entre la montaña y el mar, y quien quiere cruzarlo paga. Sus compañías sirven al contrato y a nadie más. No hay en Vástara tropa más fiel a la palabra dada.\n\nDesde el año 112 la estepa son siete clanes. Ninguno manda sobre los otros. Ninguno lo necesita.",
+  "verdad": {
+    "por": "pliego-ambaz",
+    "texto": "«La compañía Oruz cobra de la vanguardia. La compañía Teme, del mismo clan, cobra del Marjal en Vedre. El factor dice que a las dos se les paga con gotas del mismo lote. La Lengua del clan firmó los dos contratos el mismo día.»"
+  },
+  "enlaces": [
+    "boca-cerrada",
+    "corredor-de-la-estepa"
+  ],
+  "imagen": "imagenes/territorios/estepa-de-kadem.webp"
+}

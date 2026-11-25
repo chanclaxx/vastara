@@ -1,0 +1,19 @@
+{
+  "id": "mirada-alta",
+  "tipo": "lugar",
+  "titulo": "Mirada Alta",
+  "subtitulo": "Solania",
+  "voz": "solania",
+  "territorio": "solania",
+  "pos": [
+    190,
+    120
+  ],
+  "menor": false,
+  "oficial": "Ciudad del arciprestazgo, en lo alto del altiplano. Aquí se abren los pliegos de los Testigos muertos, aquí se leen en voz alta en la plaza y aquí se guardan para siempre. El arciprestazgo está obligado por su propia ley a publicar todo pliego que se abre, aunque acuse a quien lo custodia.\n\nCuarenta y ocho horas después de abrirse el pliego de Perán Vela, la Mirada Alta lo proclamó bienaventurado.",
+  "enlaces": [
+    "cuenta-de-la-mirada",
+    "peran-vela",
+    "pliego-peran"
+  ]
+}

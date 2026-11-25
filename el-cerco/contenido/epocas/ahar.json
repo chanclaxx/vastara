@@ -1,0 +1,19 @@
+{
+  "id": "ahar",
+  "tipo": "epoca",
+  "titulo": "La Vigilia de Ahar",
+  "anio": "Año −6",
+  "voz": "solania",
+  "lamina": {
+    "x": 500,
+    "y": 368,
+    "ancho": 260,
+    "pie": "El pozo de Ahar, el año en que se secó"
+  },
+  "oficial": "Antes del Reparto hubo un solo reino, el de Ahar, con un solo dios y un solo pozo. Después de cuarenta años de paz el pozo se secó y el reino se deshizo en una guerra que nadie recuerda con nombres.\n\nAsí aprendió Vástara que un pueblo sin vigilancia se pierde a sí mismo.",
+  "enlaces": [
+    "pozo-sellado",
+    "cuenca-del-cerco"
+  ],
+  "imagen": "imagenes/epocas/ahar.webp"
+}

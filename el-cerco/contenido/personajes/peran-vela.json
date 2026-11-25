@@ -1,0 +1,43 @@
+{
+  "id": "peran-vela",
+  "tipo": "personaje",
+  "titulo": "Perán Vela",
+  "subtitulo": "Bienaventurado de la Mirada",
+  "frase": "El pliego es ley, y la ley no tiene amigos.",
+  "voz": "solania",
+  "faccion": "solania",
+  "oficial": "Hijo de un herrero de Cadaval, huérfano de la peste del 202, Testigo del coronel Sarmen Ordaz desde el 213. Descubrió el contrabando de su oficial y lo escribió en su pliego sabiendo lo que costaba.\n\nLo degollaron en el banquete del solsticio del 214, en la Casa Arbelas, manos pagadas desde el delta. Su pliego se abrió esa noche. El arciprestazgo lo proclamó bienaventurado cuarenta y ocho horas después.",
+  "exaltada": {
+    "por": "acta-sedal",
+    "texto": "Bienaventurado de la Mirada, primer mártir de la Segunda Vigilia. Hijo de un herrero de Cadaval, huérfano de la peste del 202, escribió en su pliego el crimen del Marjal sabiendo que lo pagaría con la vida.\n\nSu sangre pidió a Solania que cruzara la Cuenca. Hoy la sangre del alférez Bruno Sedal, ahorcado en Vedre, le pide que no se detenga."
+  },
+  "verdad": {
+    "por": "pliego-riz",
+    "texto": "«Esa tarde el Testigo Vela bajó a los cuartos de los esteparios con la bolsa de su soldada y volvió sin ella.»\n\n«A medianoche salió solo al patio de las cocinas. Nadie lo había llamado. El alférez lo vio cruzar. No llevaba miedo. Llevaba prisa.»"
+  },
+  "enlaces": [
+    "cuenta-de-la-mirada",
+    "sarmen-ordaz",
+    "pliego-peran",
+    "casa-arbelas"
+  ],
+  "imagen": "imagenes/personajes/peran-vela.webp",
+  "red": [
+    {
+      "id": "sarmen-ordaz",
+      "como": "Su oficial, al que acusó"
+    },
+    {
+      "id": "marco-de-arbelas",
+      "como": "Anfitrión del banquete"
+    },
+    {
+      "id": "pliego-peran",
+      "como": "Su pliego"
+    },
+    {
+      "id": "ermita-del-bienaventurado",
+      "como": "Donde se guarda su funda"
+    }
+  ]
+}

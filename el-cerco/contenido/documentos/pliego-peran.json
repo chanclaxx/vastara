@@ -1,0 +1,15 @@
+{
+  "id": "pliego-peran",
+  "tipo": "documento",
+  "titulo": "Pliego de Perán Vela",
+  "subtitulo": "Testigo del coronel Sarmen Ordaz · abierto la noche del solsticio del 214",
+  "clase": "pliego",
+  "acceso": "publico",
+  "cita": "el pliego de Perán Vela",
+  "texto": "El coronel Sarmen Ordaz saca Ícor de una veta de Cadaval que no ha declarado.\nLo baja por el río Sied hasta el delta.\nLo compra la Casa Vedrani, del Marjal.\nLo he visto cargar once veces.",
+  "enlaces": [
+    "peran-vela",
+    "sarmen-ordaz",
+    "banquete"
+  ]
+}

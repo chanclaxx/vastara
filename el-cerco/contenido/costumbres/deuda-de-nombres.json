@@ -1,0 +1,14 @@
+{
+  "id": "deuda-de-nombres",
+  "tipo": "costumbre",
+  "titulo": "La Deuda de Nombres",
+  "subtitulo": "Tradición del Marjal",
+  "voz": "marjal",
+  "oficial": "En el delta no se entierra a los muertos: se los canta. Toda muerte la registra en voz alta una cantora de Ysmé y se ata en un cordel. Ninguna casa puede heredar, comerciar ni ocupar cargo mientras deba un nombre.\n\nLa obligación no distingue bando. Un marjalí canta también al enemigo que él mismo mató, y por eso el archivo del delta es el único registro completo de Vástara. Nada en él puede falsificarse: un nudo atado sin convicción no agarra.",
+  "enlaces": [
+    "el-marjal",
+    "archivo-de-nombres",
+    "adne-sarrio"
+  ],
+  "imagen": "imagenes/costumbres/deuda-de-nombres.webp"
+}

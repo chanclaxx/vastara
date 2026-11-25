@@ -1,0 +1,19 @@
+{
+  "id": "asa",
+  "tipo": "lugar",
+  "titulo": "Asa",
+  "subtitulo": "El Marjal · el pueblo de la milicia",
+  "voz": "marjal",
+  "territorio": "marjal",
+  "pos": [
+    425,
+    525
+  ],
+  "menor": true,
+  "oficial": "Pueblo de pescadores sobre pilotes, en los canales del este del delta. De Asa sale la milicia del delta: hombres que no cobran porque defienden su propia casa.\n\nEn esta guerra la milicia es la primera en caer. Las cantoras de Asa han atado este año más nudos que en los diez anteriores.",
+  "enlaces": [
+    "esclusa-de-vedre",
+    "deuda-de-nombres",
+    "halce-vedrani"
+  ]
+}

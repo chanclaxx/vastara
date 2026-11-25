@@ -1,0 +1,15 @@
+{
+  "id": "la-placa-de-vedre",
+  "tipo": "relato",
+  "titulo": "La placa de Vedre",
+  "subtitulo": "Lo que escribió Teo, aprendiz de segundo año de la galería de Ulvar",
+  "voz": "forja",
+  "epoca": "vigilia",
+  "imagen": "imagenes/costumbres/registro-de-costo.webp",
+  "oficial": "Me llamo Teo y soy aprendiz de segundo año en la galería de Ulvar. Esta semana grabé mi primera placa de campaña.\n\nEl maestre Sault bajó él mismo con la hoja de cálculo. Es un hombre cortés: me dio los buenos días y me preguntó por mi madre. Luego puso el papel sobre el banco y esperó a que yo pasara cada cifra al bronce, una por una, con el punzón fino.\n\nEn la tercera fila me temblaba el pulso. El maestre no dijo nada; me prestó su guante para que no me sudara la mano. La Liga no admite una cifra borrosa: quien va tiene que poder leerla desde el fondo de la plaza.\n\nCuando terminé, firmó en la esquina. Su firma es pequeña y recta, como sus números. Después pulimos la placa hasta que la galería entera se vio en ella.\n\nAl día siguiente la colgaron en la plaza de Hesk. Los que marchaban hacia Vedre se detuvieron a leerla. Nadie dijo nada. Nadie se fue. Así debe ser: nadie marcha engañado.\n\nEn doscientos catorce años el Ancestro no se ha equivocado una sola vez. Mi placa es la once mil trescientas ochenta y tres.",
+  "verdad": {
+    "por": "pliego-ambaz",
+    "texto": "«El factor dejó al teniente una copia de la placa del asedio, firmada E. Sault. La cifra es una sola para los dos bandos. Al pie, en letra pequeña: “Saldo a cargo de la Liga”.»\n\n«El teniente preguntó qué pasaba si la vanguardia gastaba menos vidas de las firmadas. El factor dijo que entonces la Liga cerraba el registro. No dijo cómo.»"
+  },
+  "enlaces": ["emeric-sault", "galeria-de-ulvar", "fundicion-de-hesk", "registro-de-costo", "la-forja"]
+}

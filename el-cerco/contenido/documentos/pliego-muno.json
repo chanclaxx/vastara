@@ -1,0 +1,14 @@
+{
+  "id": "pliego-muno",
+  "tipo": "documento",
+  "titulo": "Pliego de Serac Muño",
+  "subtitulo": "Capitán de la vanguardia · sirvió en una obra conjunta con la Liga",
+  "clase": "pliego",
+  "acceso": "lacrado",
+  "cita": "el pliego de Serac Muño",
+  "texto": "",
+  "enlaces": [
+    "la-forja",
+    "registro-de-costo"
+  ]
+}

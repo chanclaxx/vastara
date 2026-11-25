@@ -1,0 +1,19 @@
+{
+  "id": "penas-de-oter",
+  "tipo": "lugar",
+  "titulo": "Peñas de Oter",
+  "subtitulo": "Solania · estribaciones de la Forja",
+  "voz": "solania",
+  "territorio": "solania",
+  "pos": [
+    455,
+    38
+  ],
+  "menor": true,
+  "oficial": "Aldea de pastores colgada de las primeras peñas de la cordillera, donde se acaba el altiplano. Los de Oter suben y bajan la montaña desde niños, y por eso la corona los quiere en primera línea: de sus rebaños salen los mejores ballesteros de la vanguardia.\n\nEn Oter se dice que de cada cinco mozos que parten vuelven cuatro. Nadie en la aldea ha contado nunca a los que no vuelven.",
+  "enlaces": [
+    "solania",
+    "marco-de-arbelas",
+    "galerias-de-la-forja"
+  ]
+}

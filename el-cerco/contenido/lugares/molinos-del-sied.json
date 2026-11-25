@@ -1,0 +1,19 @@
+{
+  "id": "molinos-del-sied",
+  "tipo": "lugar",
+  "titulo": "Molinos del Sied",
+  "subtitulo": "Solania · el alto sobre el río",
+  "voz": "solania",
+  "territorio": "solania",
+  "pos": [
+    322,
+    146
+  ],
+  "menor": true,
+  "oficial": "Una hilera de molinos de viento en el alto que domina el Sied. Muelen el trigo del altiplano antes de que baje al delta en barcaza; el delta lo compra, lo vende y lo cobra dos veces.\n\nDesde la Segunda Vigilia muelen para la vanguardia. Las aspas ya no paran de noche.",
+  "enlaces": [
+    "rio-sied",
+    "solania",
+    "vigilia"
+  ]
+}

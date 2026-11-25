@@ -1,0 +1,21 @@
+{
+  "id": "cuenca-del-cerco",
+  "tipo": "lugar",
+  "titulo": "Cuenca del Cerco",
+  "subtitulo": "La gran falla",
+  "lema": "La tocan los cuatro. No es de nadie.",
+  "voz": "forja",
+  "territorio": "cuenca",
+  "pos": [
+    620,
+    375
+  ],
+  "menor": false,
+  "oficial": "Falla que cruza Vástara de la costa a la cordillera y que tocan las cuatro civilizaciones. En sus grietas aflora el Ícor, en la medida que el Ancestro dispone. La Liga ha medido cada grieta conocida; ninguna ha dado nunca una gota que sus tablas no previeran.\n\nSe llama del Cerco porque nadie la cruza armado. Hasta el 214, nadie lo había hecho en doscientos catorce años.",
+  "enlaces": [
+    "pozo-sellado",
+    "la-forja",
+    "vigilia"
+  ],
+  "imagen": "imagenes/territorios/cuenca-del-cerco.webp"
+}

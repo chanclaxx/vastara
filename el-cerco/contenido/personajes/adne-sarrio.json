@@ -1,0 +1,33 @@
+{
+  "id": "adne-sarrio",
+  "tipo": "personaje",
+  "titulo": "Adné Sarrio",
+  "subtitulo": "Cantora de Ysmé",
+  "frase": "Canto a los tuyos y a los míos. El cordel no pregunta de qué lado caíste.",
+  "voz": "marjal",
+  "faccion": "el-marjal",
+  "oficial": "Cantora de la orden de Ysmé, veinticuatro años. Sostiene de memoria el registro de la Esclusa de Vedre y canta a los muertos de los dos bandos, como manda la Deuda de Nombres.\n\nNo acepta pagos: una cantora comprada deja de valer, y un nudo atado por dinero no agarra. Lleva la marca de la orden, una línea de tinta índigo del labio a la barbilla.",
+  "enlaces": [
+    "deuda-de-nombres",
+    "archivo-de-nombres"
+  ],
+  "imagen": "imagenes/personajes/adne-sarrio.webp",
+  "red": [
+    {
+      "id": "halce-vedrani",
+      "como": "Defiende la esclusa donde canta"
+    },
+    {
+      "id": "deuda-de-nombres",
+      "como": "La ley que sirve"
+    },
+    {
+      "id": "archivo-de-nombres",
+      "como": "Donde se guardan sus cordeles"
+    },
+    {
+      "id": "isla-de-ysme",
+      "como": "La isla de su orden"
+    }
+  ]
+}

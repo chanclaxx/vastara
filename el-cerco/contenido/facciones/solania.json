@@ -1,0 +1,17 @@
+{
+  "id": "solania",
+  "tipo": "faccion",
+  "titulo": "Solania",
+  "subtitulo": "El altiplano · Vhar, el que Vigila",
+  "lema": "Nadie manda sin que alguien mire.",
+  "voz": "solania",
+  "oficial": "Reino del altiplano, de castillos y ciudades amuralladas, gobernado por una regente en nombre del rey niño y sostenido por siete casas grandes. Solania vive bajo la Cuenta de la Mirada: ningún oficial manda sin un Testigo que anote lo que hace, y lo escrito en un pliego abierto es ley que ni el rey puede desmentir. Ningún pueblo de Vástara vigila tanto a sus propios poderosos.\n\nSolania entró en el delta sin desearlo. El pliego del bienaventurado Perán Vela probó que el Marjal compraba el Ícor robado de Cadaval; la corona pidió ver el registro de nombres y el Marjal se negó. La vanguardia no va a conquistar: va a leer.",
+  "enlaces": [
+    "cuenta-de-la-mirada",
+    "mirada-alta",
+    "casa-arbelas",
+    "marca-de-cadaval",
+    "marco-de-arbelas"
+  ],
+  "imagen": "imagenes/territorios/solania.webp"
+}

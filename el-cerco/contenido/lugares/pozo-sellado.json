@@ -1,0 +1,19 @@
+{
+  "id": "pozo-sellado",
+  "tipo": "lugar",
+  "titulo": "El pozo sellado",
+  "subtitulo": "Centro de la Cuenca",
+  "voz": "marjal",
+  "territorio": "cuenca",
+  "pos": [
+    500,
+    368
+  ],
+  "menor": false,
+  "oficial": "En el centro de la Cuenca está el pozo de Ahar, el que daba Ícor a un solo reino. En el año −6, tras cuarenta años de paz, se secó, y el reino cayó con él. En el año 0 los cuatro ministros lo sellaron con piedra de las cuatro tierras para que nadie volviera a pelear por él.\n\nLas cantoras recuerdan el nombre de cada ministro. Nadie recuerda el de los muertos de aquella guerra.",
+  "enlaces": [
+    "ahar",
+    "reparto",
+    "cuenca-del-cerco"
+  ]
+}

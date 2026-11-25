@@ -1,0 +1,37 @@
+{
+  "id": "teodra-vedrani",
+  "tipo": "personaje",
+  "titulo": "Teodra Vedrani",
+  "subtitulo": "Cabeza de la Casa Vedrani",
+  "frase": "Una casa que entrega a uno de los suyos ya no es una casa. Es un mostrador.",
+  "voz": "marjal",
+  "faccion": "el-marjal",
+  "oficial": "Cabeza de la Casa Vedrani, sesenta y tres años, la casa de crédito y fletes más antigua del delta. Solania exige su entrega como precio de la paz.\n\nEl consejo de casas se ha negado: entregar a una cabeza de casa por una acusación extranjera sería entregarlas a todas.",
+  "exaltada": {
+    "por": "acta-cavir",
+    "texto": "La usurera del delta. Desde el estanque de su casa, a salvo de toda guerra, pagó durante cinco años el Ícor robado de Cadaval, y hoy paga a los esteparios que defienden su crimen.\n\nEl teniente Osmar Cavir sabía de dónde salía esa plata. Por eso lo ahorcaron."
+  },
+  "enlaces": [
+    "halce-vedrani",
+    "el-marjal"
+  ],
+  "imagen": "imagenes/personajes/teodra-vedrani.webp",
+  "red": [
+    {
+      "id": "halce-vedrani",
+      "como": "Su factor mayor"
+    },
+    {
+      "id": "el-marjal",
+      "como": "El consejo que se niega a entregarla"
+    },
+    {
+      "id": "solania",
+      "como": "Exige su entrega como precio de la paz"
+    },
+    {
+      "id": "archivo-de-nombres",
+      "como": "El registro que Solania quiere leer"
+    }
+  ]
+}

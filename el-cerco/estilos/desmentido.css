@@ -1,0 +1,181 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   DESMENTIDO: la secuencia a pantalla completa al romper un sello (js/desmentido.js).
+   Pliego: negro, lacre, grietas de luz cálida, esquirlas, ceniza. Acta: papel, sello CORREGIDA, tinta parda.
+   Sin rojo: el rojo es solo del Ícor. La luz es de vela (cálida); la ceniza, gris.
+   ───────────────────────────────────────────────────────────────────────────── */
+
+/* El diálogo del código se vuelve la pantalla entera mientras dura */
+.dialogo-sello.en-cine {
+  width: 100vw; max-width: 100vw; height: 100dvh; max-height: 100dvh;
+  background: transparent; box-shadow: none; overflow: hidden;
+}
+.dialogo-sello.en-cine::backdrop { background: #000; transition: background 0.4s; }
+.dialogo-sello.en-cine > form, .dialogo-sello.en-cine > .revelacion { display: none; }
+
+.cine {
+  position: fixed; inset: 0; overflow: hidden; isolation: isolate;
+  display: grid; place-items: center;
+  background: radial-gradient(ellipse at 50% 45%, #1f1712 0%, #070504 70%);
+  color: var(--papel);
+  animation: cine-entrar 0.6s ease both;
+}
+.cine.saliendo { animation: cine-salir 0.45s ease forwards; }
+@keyframes cine-entrar { from { opacity: 0; } }
+@keyframes cine-salir { to { opacity: 0; transform: scale(1.03); } }
+
+.cine-ceniza { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 3; }
+.cine-destello {
+  position: absolute; inset: 0; z-index: 4; pointer-events: none; opacity: 0;
+  background: radial-gradient(circle at 50% 46%, #fff6e4 0%, rgba(255, 238, 205, 0.55) 30%, rgba(0, 0, 0, 0) 70%);
+}
+.cine-destello.encendido { animation: destello 1.1s ease-out forwards; }
+@keyframes destello { 0% { opacity: 0; } 12% { opacity: 1; } 100% { opacity: 0; } }
+
+.cine-saltar {
+  position: absolute; top: 22px; right: 26px; z-index: 6;
+  background: none; border: 1px solid rgba(214, 204, 185, 0.3); color: var(--papel-sombra);
+  padding: 6px 14px; font-size: 13px; letter-spacing: 2px; text-transform: uppercase;
+}
+.cine-saltar:hover { color: var(--papel); border-color: var(--papel-sombra); }
+
+.cine-escena { position: relative; z-index: 2; width: min(980px, calc(100vw - 48px)); text-align: center; }
+.cine-acto { display: flex; flex-direction: column; align-items: center; animation: cine-entrar 0.8s ease both; }
+.cine-acto.fuera { animation: cine-salir 0.7s ease forwards; }
+
+.temblor .cine-escena { animation: temblor 0.55s linear; }
+.temblor-suave .cine-escena { animation: temblor-suave 0.4s linear; }
+@keyframes temblor {
+  0%, 100% { transform: none; } 10% { transform: translate(-9px, 5px) rotate(-0.6deg); } 25% { transform: translate(8px, -6px) rotate(0.5deg); }
+  40% { transform: translate(-6px, -3px); } 55% { transform: translate(5px, 4px) rotate(-0.3deg); } 75% { transform: translate(-3px, 2px); }
+}
+@keyframes temblor-suave { 0%, 100% { transform: none; } 30% { transform: translateY(4px); } 60% { transform: translateY(-2px); } }
+
+/* ── Rótulos y textos ──────────────────────────────────────────────────────── */
+.cine-rotulo { margin-bottom: 34px; }
+.cine-sobre { margin: 0; font-size: 13px; letter-spacing: 5px; text-transform: uppercase; color: #8a7e6e; }
+.cine-rotulo h2 { margin: 8px 0 0; font-family: var(--letra-titulo); font-weight: normal; font-size: clamp(30px, 4.4vw, 54px); letter-spacing: 0.08em; }
+.cine-pie { margin: 34px 0 0; font-family: var(--letra-documento); font-style: italic; font-size: 20px; color: #b3a68f; animation: cine-entrar 1s 0.6s both; }
+
+.cine-textos { gap: 0; }
+.cine-etiqueta { margin: 0 0 18px; font-size: 13px; letter-spacing: 4px; text-transform: uppercase; color: #8a7e6e; transition: opacity 0.8s; }
+.cine-etiqueta.apagada { opacity: 0; }
+.cine-fuente { color: #c9b79a; margin-top: 6px; animation: cine-entrar 0.8s both; }
+
+.cine-oficial {
+  margin: 0; max-width: 860px;
+  font-family: var(--letra-documento); font-size: clamp(28px, 3.6vw, 46px); line-height: 1.3; color: var(--papel);
+}
+.cine-oficial .palabra {
+  display: inline-block; white-space: pre;
+  background: linear-gradient(#c9b79a, #c9b79a) no-repeat left 58% / 0% 4px;
+  transition: background-size 0.9s cubic-bezier(0.6, 0, 0.3, 1), color 0.9s;
+}
+.cine-oficial.tachada .palabra { background-size: 100% 4px; color: #8a7e6e; }
+.cine-oficial.ceniza .palabra { animation: hacerse-ceniza 1.3s var(--d) cubic-bezier(0.4, 0, 1, 1) forwards; }
+@keyframes hacerse-ceniza {
+  to { transform: translate(var(--tx), var(--ty)) rotate(var(--giro)) scale(0.6); opacity: 0; filter: blur(6px); color: #4a4036; }
+}
+
+.cine-verdad {
+  margin: 0; max-width: 820px; min-height: 2.6em;
+  font-family: var(--letra-documento); font-size: clamp(22px, 2.7vw, 34px); line-height: 1.42; color: #f1e6d2;
+  text-shadow: 0 0 28px rgba(236, 190, 125, 0.25);
+}
+.cine-pluma { display: inline-block; width: 2px; height: 1em; margin-left: 3px; vertical-align: -0.12em; background: currentColor; animation: pluma 0.8s steps(1) infinite; }
+@keyframes pluma { 50% { opacity: 0; } }
+.cine-remate {
+  margin: 30px 0 0; font-family: var(--letra-titulo); font-size: clamp(34px, 5vw, 66px); letter-spacing: 0.06em; color: #fff4df;
+  text-shadow: 0 0 40px rgba(236, 190, 125, 0.45);
+  animation: remate 1.2s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+@keyframes remate { from { opacity: 0; letter-spacing: 0.4em; filter: blur(8px); } }
+
+.cine-ley {
+  margin-top: 40px; padding: 12px 30px;
+  border-top: 1px solid rgba(201, 183, 154, 0.5); border-bottom: 1px solid rgba(201, 183, 154, 0.5);
+  font-family: var(--letra-titulo); font-size: clamp(15px, 1.6vw, 20px); letter-spacing: 0.35em; text-transform: uppercase; color: #c9b79a;
+  animation: ley 1s cubic-bezier(0.2, 1.4, 0.4, 1) both;
+}
+@keyframes ley { from { opacity: 0; transform: scale(1.35); } }
+
+.cine-seguir {
+  margin-top: 34px; padding: 12px 26px; border: none;
+  background: var(--papel); color: var(--tinta); font-weight: 500; letter-spacing: 0.5px;
+  box-shadow: 0 0 40px rgba(236, 190, 125, 0.25); animation: cine-entrar 0.8s both;
+}
+.cine-seguir:hover { background: #fff8ec; }
+
+/* ── El sello que se rompe ─────────────────────────────────────────────────── */
+.cine-sello { position: relative; width: min(260px, 52vw); aspect-ratio: 1; animation: caer 1s cubic-bezier(0.3, 1.5, 0.5, 1) both; }
+@keyframes caer { from { transform: translateY(-60px) scale(1.5); opacity: 0; } }
+.cine-disco, .cine-esquirla {
+  position: absolute; inset: 0; border-radius: 50%;
+  background: radial-gradient(circle at 38% 32%, #5a4030 0%, #2b1c14 62%, #160e09 100%);
+  box-shadow: inset 0 0 0 7px rgba(255, 255, 255, 0.04), inset 0 -12px 30px rgba(0, 0, 0, 0.5);
+}
+.cine-disco { box-shadow: 0 0 70px rgba(236, 170, 95, 0.28), 0 20px 50px #000, inset 0 0 0 7px rgba(255, 255, 255, 0.04); animation: latido 1.4s ease-in-out infinite; }
+@keyframes latido { 50% { box-shadow: 0 0 110px rgba(236, 170, 95, 0.45), 0 20px 50px #000, inset 0 0 0 7px rgba(255, 255, 255, 0.04); } }
+.cine-ojo { position: absolute; inset: 0; display: grid; place-items: center; }
+.cine-ojo svg { width: 46%; height: 46%; }
+
+.cine-grietas { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.cine-grietas polyline {
+  fill: none; stroke: #ffe3b5; stroke-width: 1.3; stroke-linejoin: round;
+  stroke-dasharray: 80; stroke-dashoffset: 80; opacity: 0;
+  filter: drop-shadow(0 0 3px #ffcf86) drop-shadow(0 0 8px rgba(255, 190, 110, 0.8));
+}
+.agrietado .cine-grietas polyline { opacity: 1; animation: grieta 0.9s cubic-bezier(0.5, 0, 0.2, 1) forwards; }
+.agrietado .cine-grietas polyline:nth-child(2n) { animation-delay: 0.15s; }
+.agrietado .cine-grietas polyline:nth-child(3n) { animation-delay: 0.3s; }
+.cine-grietas .rama { stroke-width: 0.8; }
+.agrietado .cine-grietas .rama { animation-delay: 0.45s; }
+@keyframes grieta { to { stroke-dashoffset: 0; } }
+.agrietado .cine-disco { animation: latido 0.25s ease-in-out infinite; }
+
+.cine-esquirlas { position: absolute; inset: 0; opacity: 0; }
+.roto .cine-disco { opacity: 0; transition: opacity 0.05s; }
+.roto .cine-esquirlas { opacity: 1; }
+.roto .cine-esquirla { animation: volar 1.4s cubic-bezier(0.15, 0.7, 0.3, 1) forwards; }
+@keyframes volar { to { transform: translate(var(--dx), var(--dy)) rotate(var(--giro)) scale(0.7); opacity: 0; filter: blur(2px); } }
+
+/* ── El acta: papel, sello CORREGIDA y tinta ───────────────────────────────── */
+.cine-acta { background: radial-gradient(ellipse at 50% 40%, #f4eee2 0%, #d9ceb9 100%); color: var(--tinta); }
+.cine-acta .cine-saltar { color: var(--tinta-2); border-color: rgba(93, 82, 70, 0.35); }
+.cine-acta .cine-sobre, .cine-acta .cine-etiqueta { color: var(--tinta-3); }
+.cine-acta .cine-rotulo h2 { color: var(--tinta); }
+.cine-acta .cine-oficial { color: var(--tinta); }
+.cine-acta .cine-fuente { color: var(--exaltado); }
+.cine-acta .cine-verdad { color: var(--exaltado); text-shadow: none; }
+.cine-acta .cine-ley { color: var(--exaltado); border-color: rgba(74, 46, 30, 0.45); }
+.cine-acta .cine-seguir { background: var(--tinta); color: var(--papel); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25); }
+
+.cine-corregir { position: relative; padding: 10px 20px; margin-bottom: 64px; }
+.cine-oficial.emborronada .palabra { animation: emborronar 1.2s var(--d) ease forwards; }
+@keyframes emborronar { to { color: var(--exaltado); filter: blur(2.5px); opacity: 0.28; } }
+.cine-estampa {
+  position: absolute; top: 50%; left: 50%; z-index: 2; pointer-events: none;
+  padding: 8px 26px; border: 5px double var(--exaltado);
+  font-family: var(--letra-titulo); font-size: clamp(34px, 5vw, 64px); letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--exaltado); opacity: 0.88; mix-blend-mode: multiply;
+  transform: translate(-50%, -50%) rotate(-8deg);
+  animation: estampa 0.45s cubic-bezier(0.3, 1.6, 0.4, 1) both;
+}
+@keyframes estampa { from { transform: translate(-50%, -50%) rotate(-8deg) scale(3); opacity: 0; } }
+.cine-manchas { position: absolute; inset: -20px; pointer-events: none; }
+.cine-manchas .gota {
+  position: absolute; width: var(--t); height: var(--t); border-radius: 50% 46% 52% 48%;
+  background: var(--exaltado); opacity: 0.72; translate: -50% -50%;
+  animation: mancha 0.35s var(--d) cubic-bezier(0.2, 1.8, 0.4, 1) both;
+}
+@keyframes mancha { from { transform: scale(0); } }
+
+/* Después de la secuencia, la hoja del documento aparece ya abierta (sin el sello pequeño) */
+.revelacion.tras-cine .lacre { display: none; }
+.revelacion.tras-cine .hoja-revelada { animation: tinta 0.6s both ease-out; }
+.revelacion.tras-cine .hoja-revelada .texto p { animation: tinta 0.6s both ease-out; animation-delay: calc(0.2s + var(--i) * 0.2s); }
+.revelacion.tras-cine .cambios { animation: tinta 0.6s both; animation-delay: calc(0.4s + var(--n) * 0.2s); }
+
+@media (max-width: 620px) {
+  .cine-saltar { top: 12px; right: 12px; }
+  .cine-rotulo { margin-bottom: 22px; }
+}

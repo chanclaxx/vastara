@@ -1,0 +1,20 @@
+{
+  "id": "casa-ordaz",
+  "tipo": "lugar",
+  "titulo": "Casa Ordaz",
+  "subtitulo": "Solania · en ruinas",
+  "voz": "solania",
+  "territorio": "solania",
+  "pos": [
+    285,
+    236
+  ],
+  "menor": true,
+  "desde": "vigilia",
+  "oficial": "Residencia del coronel Sarmen Ordaz, gobernador de Cadaval, confiscada tras su ejecución en el 214. La corona la entregó a la Casa Arbelas junto con la gobernación, y la Casa Arbelas la dejó caer: hoy no tiene tejados.\n\nLos vecinos aseguran que el coronel guardaba en ella los formularios de todas las levas y de todos los cierres de su comarca. Nadie los ha encontrado.",
+  "enlaces": [
+    "sarmen-ordaz",
+    "casa-arbelas",
+    "marca-de-cadaval"
+  ]
+}

@@ -1,0 +1,140 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   LIBRO: la Historia como un libro abierto sobre la mesa (js/historia.js).
+   Dos páginas de papel de trapo, lomo en sombra, láminas recortadas del relieve
+   y una hoja que gira sobre el lomo al pasar de capítulo.
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.vista-historia {
+  background: radial-gradient(ellipse at 50% 45%, #33291f 0%, var(--fondo) 75%);
+  display: grid; place-items: center;
+  padding: 24px 16px;
+}
+.libro {
+  display: grid;
+  grid-template-columns: 48px auto 48px;
+  grid-template-rows: auto auto;
+  align-items: center; gap: 0 14px;
+  perspective: 2600px;
+}
+.pliego-libro {
+  position: relative;
+  display: grid; grid-template-columns: 1fr 1fr;
+  width: min(1180px, calc(100vw - 160px));
+  height: min(760px, calc(100dvh - var(--alto-cabecera) - 90px));
+  box-shadow: 0 30px 80px #000000c0, 0 0 160px var(--luz);
+  transform-style: preserve-3d;
+}
+.pagina {
+  position: relative;
+  background: var(--papel);
+  color: var(--tinta);
+  padding: 46px 52px 54px;
+  overflow: hidden;
+}
+.pagina.izquierda {
+  background: linear-gradient(to left, #d8ccb5 0%, var(--papel) 7%, var(--papel) 100%);
+  box-shadow: inset 6px 0 0 #e4d9c6, inset 8px 0 0 #cbbfa9;
+  border-radius: 3px 0 0 3px;
+}
+.pagina.derecha {
+  background: linear-gradient(to right, #d8ccb5 0%, var(--papel) 7%, var(--papel) 100%);
+  box-shadow: inset -6px 0 0 #e4d9c6, inset -8px 0 0 #cbbfa9;
+  border-radius: 0 3px 3px 0;
+  overflow-y: auto;
+}
+
+.pasar {
+  width: 48px; height: 72px;
+  background: none; border: 1px solid #4a3e33; color: var(--papel-sombra);
+  font-family: var(--letra-documento); font-size: 34px; line-height: 1;
+}
+.pasar:hover:not(:disabled) { color: var(--papel); border-color: var(--papel-sombra); }
+.pasar:disabled { opacity: 0.25; cursor: default; }
+.indicador {
+  grid-column: 2; margin: 14px 0 0; text-align: center;
+  font-family: var(--letra-documento); font-style: italic; color: var(--tinta-3); font-size: 15px;
+}
+
+/* Portada */
+.portada-arriba { margin: 0; text-align: center; font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: var(--tinta-3); }
+.sello-portada {
+  width: 92px; height: 92px; margin: 60px auto 26px; border-radius: 50%;
+  background: radial-gradient(circle at 40% 35%, #4a3426, var(--lacre) 70%);
+  display: grid; place-items: center; box-shadow: 0 3px 10px #00000050;
+}
+.sello-portada svg { width: 46px; height: 46px; }
+.portada-titulo { margin: 0; text-align: center; font-family: var(--letra-titulo); font-weight: normal; font-size: 46px; letter-spacing: 4px; }
+.portada-sub { margin: 14px auto 0; max-width: 360px; text-align: center; font-family: var(--letra-documento); font-style: italic; font-size: 18px; color: var(--tinta-2); }
+.portada-nota { position: absolute; left: 52px; right: 52px; bottom: 54px; margin: 0; text-align: center; font-size: 13.5px; color: var(--tinta-3); }
+.indice-cabecera { margin: 10px 0 20px; font-family: var(--letra-titulo); font-weight: normal; font-size: 24px; letter-spacing: 3px; }
+.indice-libro { list-style: none; margin: 0; padding: 0; }
+.indice-libro a {
+  display: grid; grid-template-columns: 44px 1fr auto; align-items: baseline; gap: 10px;
+  padding: 11px 0; border-bottom: 1px dotted var(--papel-sombra); text-decoration: none;
+}
+.indice-libro a:hover .indice-titulo { text-decoration: underline; }
+.indice-num { font-family: var(--letra-titulo); color: var(--tinta-3); }
+.indice-titulo { font-family: var(--letra-documento); font-size: 19px; }
+.indice-anio { font-size: 13px; color: var(--tinta-3); letter-spacing: 0.5px; }
+
+/* Capítulo */
+.capitulo { margin: 0; font-family: var(--letra-titulo); font-size: 15px; letter-spacing: 4px; color: var(--tinta-3); }
+.capitulo-anio { margin: 4px 0 0; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--tinta-2); }
+.capitulo-titulo { margin: 8px 0 22px; font-family: var(--letra-documento); font-weight: normal; font-size: 38px; line-height: 1.1; }
+.lamina-libro {
+  width: 100%; aspect-ratio: 4 / 3;
+  background-color: var(--papel-3);
+  background-repeat: no-repeat;
+  border: 1px solid #b9ab92;
+  box-shadow: 0 0 0 5px var(--papel), 0 0 0 6px #b9ab92;
+  filter: sepia(0.35) saturate(0.8) contrast(1.05);
+}
+.lamina-libro.antigua { filter: sepia(0.9) saturate(0.5) brightness(1.1) blur(0.6px); }
+.pie-lamina { margin: 14px 0 0; text-align: center; font-family: var(--letra-documento); font-style: italic; font-size: 15px; color: var(--tinta-2); }
+.numero-pagina { position: absolute; bottom: 20px; margin: 0; font-family: var(--letra-documento); font-size: 14px; color: var(--tinta-3); }
+.izquierda .numero-pagina { left: 52px; }
+.derecha .numero-pagina { right: 52px; }
+.derecha .texto { font-size: 19px; line-height: 1.6; }
+.derecha .texto p:first-child span::first-letter {
+  float: left; font-family: var(--letra-titulo); font-size: 58px; line-height: 0.85; padding: 6px 8px 0 0; color: var(--tinta);
+}
+
+/* La hoja que pasa */
+.pagina.debajo { position: absolute; top: 0; bottom: 0; width: 50%; z-index: 2; }
+.pagina.debajo.izquierda { left: 0; }
+.pagina.debajo.derecha { right: 0; }
+.hoja-que-pasa {
+  position: absolute; top: 0; bottom: 0; width: 50%; z-index: 3;
+  transform-style: preserve-3d;
+  animation: 0.95s cubic-bezier(.45,.05,.35,1) forwards;
+}
+.hoja-que-pasa.hacia-izquierda { left: 50%; transform-origin: left center; animation-name: pasar-izquierda; }
+.hoja-que-pasa.hacia-derecha { left: 0; transform-origin: right center; animation-name: pasar-derecha; }
+@keyframes pasar-izquierda { from { transform: rotateY(0deg); } to { transform: rotateY(-180deg); } }
+@keyframes pasar-derecha { from { transform: rotateY(0deg); } to { transform: rotateY(180deg); } }
+.hoja-que-pasa .cara { position: absolute; inset: 0; backface-visibility: hidden; }
+.hoja-que-pasa .dorso { transform: rotateY(180deg); }
+.hoja-que-pasa .cara::after {          /* la sombra que cae sobre la hoja al girar */
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(to right, rgba(0,0,0,0.18), rgba(0,0,0,0));
+  animation: sombra-hoja 0.95s ease-in-out forwards;
+}
+@keyframes sombra-hoja { 0%, 100% { opacity: 0; } 50% { opacity: 1; } }
+
+/* Teléfono: una página debajo de otra */
+@media (max-width: 820px) {
+  .vista-historia { display: block; padding: 12px; }
+  .libro { grid-template-columns: 40px 1fr 40px; gap: 0 6px; }
+  .pliego-libro { grid-template-columns: 1fr; width: auto; height: auto; }
+  .pagina { padding: 28px 22px 44px; }
+  .pagina.izquierda, .pagina.derecha { border-radius: 3px; overflow: visible; }
+  .izquierda .numero-pagina { left: 22px; } .derecha .numero-pagina { right: 22px; }
+  .capitulo-titulo { font-size: 30px; }
+  .portada-nota { position: static; margin-top: 30px; }
+  .pasar { height: 56px; width: 40px; align-self: start; position: sticky; top: 12px; }
+}
+
+/* Frontispicio de la portada: solo si contenido/indice.json tiene "portada" */
+.lamina-libro.frontispicio { width: 78%; margin: 22px auto 0; }
+.portada-con-imagen .sello-portada { width: 64px; height: 64px; margin: 22px auto 14px; }
+.portada-con-imagen .sello-portada svg { width: 32px; height: 32px; }

@@ -1,0 +1,15 @@
+{
+  "id": "acta-sedal",
+  "tipo": "documento",
+  "titulo": "Acta de martirio del alférez Bruno Sedal",
+  "subtitulo": "Dada por el arciprestazgo de la Mirada Alta",
+  "clase": "acta",
+  "acceso": "acta",
+  "cita": "el acta de martirio del alférez Bruno Sedal",
+  "texto": "El arciprestazgo de la Mirada Alta da fe de que el alférez Bruno Sedal, de la guardia de la Casa Arbelas, fue ahorcado por los mercaderes del delta en la Esclusa de Vedre, sin juicio y sin canto.\n\nSobrino de una casa menor, sirvió sin pedir nada. Hizo guardia la noche en que cayó el bienaventurado Perán Vela, y ha muerto por la misma mano.\n\nSu Testigo, Tobal Riz, vive. Su pliego sigue cerrado. El arciprestazgo no necesita abrirlo para saber lo que dice.\n\nSe le cuenta entre los mártires de la Segunda Vigilia.",
+  "enlaces": [
+    "esclusa-de-vedre",
+    "halce-vedrani",
+    "banquete"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "bocamina-de-sarn",
+  "tipo": "lugar",
+  "titulo": "Bocamina de Sarn",
+  "subtitulo": "La Forja · las minas de hierro",
+  "voz": "forja",
+  "territorio": "forja",
+  "pos": [
+    700,
+    62
+  ],
+  "menor": true,
+  "oficial": "La boca de las minas de hierro más hondas de Vástara. Las galerías bajan 900 varas y los mineros trabajan por turnos contados: la Liga publica antes de cada año cuántos no volverán a subir.\n\nNingún minero de Sarn ha protestado nunca. La cifra estaba en la placa.",
+  "enlaces": [
+    "registro-de-costo",
+    "la-forja"
+  ]
+}

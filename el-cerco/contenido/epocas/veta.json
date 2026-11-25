@@ -1,0 +1,21 @@
+{
+  "id": "veta",
+  "tipo": "epoca",
+  "titulo": "La veta",
+  "anio": "Año 209",
+  "voz": "solania",
+  "lamina": {
+    "x": 362,
+    "y": 300,
+    "ancho": 80,
+    "pie": "El crudo baja de noche hacia el río Sied"
+  },
+  "oficial": "En la tierra de Cadaval empieza a manar Ícor. El gobernador Sarmen Ordaz no lo declara a la corona ni al arciprestazgo.\n\nDurante cinco años lo saca en secreto por el río Sied y lo vende al Marjal.",
+  "enlaces": [
+    "marca-de-cadaval",
+    "sarmen-ordaz",
+    "rio-sied",
+    "halce-vedrani"
+  ],
+  "imagen": "imagenes/epocas/veta.webp"
+}

@@ -1,0 +1,208 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" id="mapa-svg" role="img" aria-label="Mapa de Vástara">
+<!--
+  PLANTILLA del mapa. No editar mapa.svg a mano: se genera con  python blender/actualizar_svg.py
+  (rellena los huecos entre dobles llaves con blender/geografia.json, que escribe construir_mapa.py).
+
+  El fondo es el relieve renderizado en Blender (mapa/relieve.webp), alineado con este viewBox.
+  Encima va la capa interactiva. Atributos que lee js/mapa.js:
+    data-entrada="id"          al hacer clic abre esa entrada
+    data-desde="epoca"         visible desde esa época (incluida)
+    data-hasta="epoca"         visible hasta esa época (incluida)
+    data-requiere="sello"      solo si ese documento está abierto
+    data-oculta-si="a b"       se oculta si alguno de esos documentos está abierto
+  Las líneas con class="trazo" se dibujan con tinta al aparecer.
+-->
+<defs>
+  <pattern id="trama-cierre" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+    <line x1="0" y1="0" x2="0" y2="5" class="trama-oscura" stroke-width="0.8"/>
+  </pattern>
+  <marker id="punta-fria" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" class="relleno-frio"/>
+  </marker>
+  <marker id="punta-tinta" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" class="relleno-tinta"/>
+  </marker>
+  <radialGradient id="vineta" cx="50%" cy="50%" r="72%">
+    <stop offset="62%" stop-color="#120e0b" stop-opacity="0"/>
+    <stop offset="100%" stop-color="#120e0b" stop-opacity="0.55"/>
+  </radialGradient>
+
+  <path id="t-solania" d="M0,0 L500,0 L492,60 L506,140 L488,220 L500,300 L500,338.9 L490,338.4 L480,338.4 L470,338.8 L460,339.1 L450,339.2 L440,338.7 L430,337.6 L420,336.1 L410,334.5 L400,333 L390,332 L380,331.5 L370,331.4 L360,331.5 L350,331.7 L340,331.7 L330,331.6 L320,331.5 L310,331.6 L300,332.1 L290,333.1 L280,334.4 L270,335.9 L260,337.1 L250,337.7 L240,337.3 L230,336.2 L220,334.4 L210,332.6 L200,331.2 L190,330.6 L180,330.9 L170,332 L160,333.4 L150,334.6 L140,335.1 L130,334.8 L120,333.7 L110,332.3 L100,331.3 L90,331.2 L80,332.5 L70,335.2 L60,338.8 L50,342.6 L40,345.7 L30,347.4 L20,347.2 L10,345.3 L0,342.1 Z"/>
+  <path id="t-forja"   d="M500,0 L1000,0 L1000,334 L990,333.2 L980,330.5 L970,326.1 L960,320.7 L950,315.3 L940,310.8 L930,308 L920,307.3 L910,308.4 L900,310.5 L890,313 L880,314.9 L870,315.8 L860,315.8 L850,315.3 L840,315.2 L830,316.3 L820,319.1 L810,323.7 L800,329.8 L790,336.5 L780,342.8 L770,347.7 L760,350.7 L750,351.6 L740,350.9 L730,349.4 L720,347.8 L710,346.9 L700,346.9 L690,347.8 L680,349 L670,349.9 L660,349.8 L650,348.5 L640,345.9 L630,342.6 L620,339.1 L610,336.3 L600,334.7 L590,334.4 L580,335.5 L570,337.3 L560,339.2 L550,340.8 L540,341.5 L530,341.5 L520,340.7 L510,339.7 L500,338.9 L500,300 L488,220 L506,140 L492,60 L500,0 Z"/>
+  <path id="t-marjal"  d="M0,414.4 L10,414.2 L20,413 L30,411 L40,408.7 L50,406.6 L60,405.2 L70,405.1 L80,406.1 L90,408 L100,410.2 L110,412.1 L120,413.2 L130,413.3 L140,412.5 L150,411.2 L160,410.2 L170,410 L180,410.8 L190,412.7 L200,414.9 L210,416.7 L220,417.3 L230,416.1 L240,412.7 L250,407.5 L260,401.3 L270,394.9 L280,389.3 L290,385.2 L300,382.6 L310,381.2 L320,380.4 L330,379.4 L340,377.4 L350,374.4 L360,370.7 L370,366.8 L380,363.8 L390,362.5 L400,363.5 L410,366.7 L420,371.5 L430,377.2 L440,382.6 L450,386.8 L460,389.4 L470,390.5 L480,390.4 L490,390 L500,390 L506,480 L490,560 L502,640 L496,700 L300,700 L300,700 L291.2,696.4 L282.6,692.8 L274.1,689.1 L265.8,685.3 L257.7,681.5 L249.7,677.7 L242,673.7 L234.4,669.7 L227,665.6 L219.8,661.4 L212.9,657.2 L206.1,652.8 L199.5,648.4 L193.1,643.8 L186.9,639.2 L180.9,634.5 L175.2,629.7 L169.6,624.7 L164.3,619.7 L159.2,614.5 L154.3,609.3 L149.7,603.9 L145.3,598.4 L141.1,592.7 L137.2,586.9 L133.5,581 L130,575 L126.6,568.3 L123.2,561.6 L119.6,554.9 L116,548.2 L112.2,541.5 L108.4,534.8 L104.5,528.2 L100.4,521.7 L96.3,515.3 L92,508.9 L87.7,502.7 L83.2,496.6 L78.6,490.7 L73.9,484.9 L69,479.3 L64.1,473.9 L58.9,468.7 L53.7,463.7 L48.3,459 L42.8,454.6 L37.1,450.4 L31.3,446.5 L25.4,442.9 L19.3,439.7 L13,436.8 L6.6,434.2 L0,432 Z"/>
+  <path id="t-estepa"  d="M500,390 L510,391.1 L520,393.2 L530,396.2 L540,399.2 L550,401.5 L560,402.6 L570,402.1 L580,400.2 L590,397.6 L600,394.9 L610,393.1 L620,392.5 L630,393.5 L640,395.8 L650,398.8 L660,401.8 L670,404.3 L680,406 L690,406.9 L700,407.2 L710,407.4 L720,407.9 L730,409 L740,410.7 L750,412.6 L760,414.3 L770,415.5 L780,415.9 L790,415.3 L800,413.8 L810,411.9 L820,409.9 L830,408.1 L840,406.5 L850,405.3 L860,404.2 L870,403 L880,401.7 L890,400.1 L900,398.6 L910,397.2 L920,396.2 L930,395.8 L940,395.8 L950,395.9 L960,396 L970,395.7 L980,394.7 L990,393.1 L1000,391.1 L1000,700 L496,700 L502,640 L490,560 L506,480 Z"/>
+</defs>
+
+<!-- ── EL RELIEVE (Blender) ───────────────────────────────────────────────────────────────── -->
+<image href="mapa/relieve.webp" x="0" y="0" width="1000" height="700" preserveAspectRatio="none" class="relieve-3d"/>
+<rect x="0" y="0" width="1000" height="700" fill="url(#vineta)" pointer-events="none"/>
+
+<!-- Zonas de clic de la geografía (invisibles) -->
+<path d="M0,342.1 L10,345.3 L20,347.2 L30,347.4 L40,345.7 L50,342.6 L60,338.8 L70,335.2 L80,332.5 L90,331.2 L100,331.3 L110,332.3 L120,333.7 L130,334.8 L140,335.1 L150,334.6 L160,333.4 L170,332 L180,330.9 L190,330.6 L200,331.2 L210,332.6 L220,334.4 L230,336.2 L240,337.3 L250,337.7 L260,337.1 L270,335.9 L280,334.4 L290,333.1 L300,332.1 L310,331.6 L320,331.5 L330,331.6 L340,331.7 L350,331.7 L360,331.5 L370,331.4 L380,331.5 L390,332 L400,333 L410,334.5 L420,336.1 L430,337.6 L440,338.7 L450,339.2 L460,339.1 L470,338.8 L480,338.4 L490,338.4 L500,338.9 L510,339.7 L520,340.7 L530,341.5 L540,341.5 L550,340.8 L560,339.2 L570,337.3 L580,335.5 L590,334.4 L600,334.7 L610,336.3 L620,339.1 L630,342.6 L640,345.9 L650,348.5 L660,349.8 L670,349.9 L680,349 L690,347.8 L700,346.9 L710,346.9 L720,347.8 L730,349.4 L740,350.9 L750,351.6 L760,350.7 L770,347.7 L780,342.8 L790,336.5 L800,329.8 L810,323.7 L820,319.1 L830,316.3 L840,315.2 L850,315.3 L860,315.8 L870,315.8 L880,314.9 L890,313 L900,310.5 L910,308.4 L920,307.3 L930,308 L940,310.8 L950,315.3 L960,320.7 L970,326.1 L980,330.5 L990,333.2 L1000,334 L1000,391.1 L990,393.1 L980,394.7 L970,395.7 L960,396 L950,395.9 L940,395.8 L930,395.8 L920,396.2 L910,397.2 L900,398.6 L890,400.1 L880,401.7 L870,403 L860,404.2 L850,405.3 L840,406.5 L830,408.1 L820,409.9 L810,411.9 L800,413.8 L790,415.3 L780,415.9 L770,415.5 L760,414.3 L750,412.6 L740,410.7 L730,409 L720,407.9 L710,407.4 L700,407.2 L690,406.9 L680,406 L670,404.3 L660,401.8 L650,398.8 L640,395.8 L630,393.5 L620,392.5 L610,393.1 L600,394.9 L590,397.6 L580,400.2 L570,402.1 L560,402.6 L550,401.5 L540,399.2 L530,396.2 L520,393.2 L510,391.1 L500,390 L490,390 L480,390.4 L470,390.5 L460,389.4 L450,386.8 L440,382.6 L430,377.2 L420,371.5 L410,366.7 L400,363.5 L390,362.5 L380,363.8 L370,366.8 L360,370.7 L350,374.4 L340,377.4 L330,379.4 L320,380.4 L310,381.2 L300,382.6 L290,385.2 L280,389.3 L270,394.9 L260,401.3 L250,407.5 L240,412.7 L230,416.1 L220,417.3 L210,416.7 L200,414.9 L190,412.7 L180,410.8 L170,410 L160,410.2 L150,411.2 L140,412.5 L130,413.3 L120,413.2 L110,412.1 L100,410.2 L90,408 L80,406.1 L70,405.1 L60,405.2 L50,406.6 L40,408.7 L30,411 L20,413 L10,414.2 L0,414.4 Z" class="zona-area" data-entrada="cuenca-del-cerco"/>
+<path d="M285,95 C300,150 330,190 340,240 C350,280 365,320 372,370 C378,420 352,452 338,470 C320,500 282,520 250,545 C222,568 190,590 156,604" class="zona-clic" data-entrada="rio-sied"/>
+<text x="292" y="200" class="rotulo-agua" transform="rotate(64 292 200)" data-entrada="rio-sied">río Sied</text>
+<text x="760" y="387" class="rotulo-cuenca" data-entrada="cuenca-del-cerco">CUENCA DEL CERCO</text>
+<text x="70" y="650" class="rotulo-agua">mar</text>
+
+<!-- ── ÉPOCA DE AHAR: un solo reino; el mapa se ve velado, antes de todo lo que hay hoy ──── -->
+<g data-hasta="ahar">
+  <rect x="0" y="0" width="1000" height="700" class="velo-antiguo"/>
+  <text x="500" y="190" class="rotulo-reino" data-entrada="ahar">REINO DE AHAR</text>
+  <text x="500" y="216" class="rotulo-nota">un solo dios · un solo pozo</text>
+  <g data-entrada="pozo-sellado">
+    <circle cx="500" cy="368" r="9" class="marca-anillo"/>
+    <text x="500" y="404" class="rotulo-nota">el pozo se seca</text>
+  </g>
+</g>
+
+<!-- ── DESDE EL REPARTO: fronteras, territorios y lugares ─────────────────────────────────── -->
+<g data-desde="reparto">
+  <g data-entrada="solania" class="territorio">
+    <use href="#t-solania" class="tinte tinte-solania"/>
+  </g>
+  <g data-entrada="la-forja" class="territorio">
+    <use href="#t-forja" class="tinte tinte-forja"/>
+  </g>
+  <g data-entrada="el-marjal" class="territorio">
+    <use href="#t-marjal" class="tinte tinte-marjal"/>
+  </g>
+  <g data-entrada="estepa-de-kadem" class="territorio">
+    <use href="#t-estepa" class="tinte tinte-estepa"/>
+  </g>
+  <path d="M0,342.1 L10,345.3 L20,347.2 L30,347.4 L40,345.7 L50,342.6 L60,338.8 L70,335.2 L80,332.5 L90,331.2 L100,331.3 L110,332.3 L120,333.7 L130,334.8 L140,335.1 L150,334.6 L160,333.4 L170,332 L180,330.9 L190,330.6 L200,331.2 L210,332.6 L220,334.4 L230,336.2 L240,337.3 L250,337.7 L260,337.1 L270,335.9 L280,334.4 L290,333.1 L300,332.1 L310,331.6 L320,331.5 L330,331.6 L340,331.7 L350,331.7 L360,331.5 L370,331.4 L380,331.5 L390,332 L400,333 L410,334.5 L420,336.1 L430,337.6 L440,338.7 L450,339.2 L460,339.1 L470,338.8 L480,338.4 L490,338.4 L500,338.9 L510,339.7 L520,340.7 L530,341.5 L540,341.5 L550,340.8 L560,339.2 L570,337.3 L580,335.5 L590,334.4 L600,334.7 L610,336.3 L620,339.1 L630,342.6 L640,345.9 L650,348.5 L660,349.8 L670,349.9 L680,349 L690,347.8 L700,346.9 L710,346.9 L720,347.8 L730,349.4 L740,350.9 L750,351.6 L760,350.7 L770,347.7 L780,342.8 L790,336.5 L800,329.8 L810,323.7 L820,319.1 L830,316.3 L840,315.2 L850,315.3 L860,315.8 L870,315.8 L880,314.9 L890,313 L900,310.5 L910,308.4 L920,307.3 L930,308 L940,310.8 L950,315.3 L960,320.7 L970,326.1 L980,330.5 L990,333.2 L1000,334 L1000,391.1 L990,393.1 L980,394.7 L970,395.7 L960,396 L950,395.9 L940,395.8 L930,395.8 L920,396.2 L910,397.2 L900,398.6 L890,400.1 L880,401.7 L870,403 L860,404.2 L850,405.3 L840,406.5 L830,408.1 L820,409.9 L810,411.9 L800,413.8 L790,415.3 L780,415.9 L770,415.5 L760,414.3 L750,412.6 L740,410.7 L730,409 L720,407.9 L710,407.4 L700,407.2 L690,406.9 L680,406 L670,404.3 L660,401.8 L650,398.8 L640,395.8 L630,393.5 L620,392.5 L610,393.1 L600,394.9 L590,397.6 L580,400.2 L570,402.1 L560,402.6 L550,401.5 L540,399.2 L530,396.2 L520,393.2 L510,391.1 L500,390 L490,390 L480,390.4 L470,390.5 L460,389.4 L450,386.8 L440,382.6 L430,377.2 L420,371.5 L410,366.7 L400,363.5 L390,362.5 L380,363.8 L370,366.8 L360,370.7 L350,374.4 L340,377.4 L330,379.4 L320,380.4 L310,381.2 L300,382.6 L290,385.2 L280,389.3 L270,394.9 L260,401.3 L250,407.5 L240,412.7 L230,416.1 L220,417.3 L210,416.7 L200,414.9 L190,412.7 L180,410.8 L170,410 L160,410.2 L150,411.2 L140,412.5 L130,413.3 L120,413.2 L110,412.1 L100,410.2 L90,408 L80,406.1 L70,405.1 L60,405.2 L50,406.6 L40,408.7 L30,411 L20,413 L10,414.2 L0,414.4 Z" class="zona-area" data-entrada="cuenca-del-cerco"/>
+  <!-- Solo las dos fronteras interiores; la falla y la costa ya separan lo demás -->
+  <path d="M500,0 L492,60 L506,140 L488,220 L500,300 L500,338.9 M500,390 L506,480 L490,560 L502,640 L496,700" class="frontera-halo"/>
+  <path d="M500,0 L492,60 L506,140 L488,220 L500,300 L500,338.9 M500,390 L506,480 L490,560 L502,640 L496,700" class="frontera trazo"/>
+
+  <text x="140" y="300" class="rotulo-faccion" data-entrada="solania">SOLANIA</text>
+  <text x="760" y="44" class="rotulo-faccion" data-entrada="la-forja">LA FORJA</text>
+  <text x="400" y="686" class="rotulo-faccion" data-entrada="el-marjal">EL MARJAL</text>
+  <text x="780" y="680" class="rotulo-faccion" data-entrada="estepa-de-kadem">ESTEPA DE KADEM</text>
+
+  <g data-entrada="pozo-sellado">
+    <circle cx="500" cy="368" r="11" class="marca-anillo"/>
+    <text x="500" y="402" class="rotulo-nota">pozo sellado</text>
+  </g>
+
+  <g data-entrada="corredor-de-la-estepa">
+    <path d="M770,205 C760,280 750,340 735,410 C715,490 650,560 560,590 C520,602 470,600 420,590" class="ruta trazo"/>
+    <path d="M770,205 C760,280 750,340 735,410 C715,490 650,560 560,590 C520,602 470,600 420,590" class="zona-clic"/>
+    <text x="668" y="530" class="rotulo-nota" transform="rotate(-38 668 530)">corredor de la Estepa</text>
+  </g>
+
+  <g class="marcador" data-entrada="mirada-alta">
+    <circle cx="190" cy="120" r="30" class="zona-clic-area"/>
+    <text x="190" y="162" class="rotulo-lugar centro">Mirada Alta</text>
+  </g>
+  <g class="marcador" data-entrada="casa-arbelas">
+    <circle cx="390" cy="178" r="16" class="zona-clic-area"/>
+    <text x="410" y="182" class="rotulo-lugar">Casa Arbelas</text>
+  </g>
+  <g class="marcador" data-entrada="marca-de-cadaval">
+    <circle cx="352" cy="290" r="14" class="zona-clic-area"/>
+    <text x="336" y="294" class="rotulo-lugar fin">Marca de Cadaval</text>
+  </g>
+  <g class="marcador" data-entrada="galerias-de-la-forja">
+    <circle cx="770" cy="195" r="20" class="zona-clic-area"/>
+    <text x="770" y="232" class="rotulo-lugar centro">Galerías de la Forja</text>
+  </g>
+  <g class="marcador" data-entrada="esclusa-de-vedre">
+    <circle cx="338" cy="470" r="16" class="zona-clic-area"/>
+    <text x="358" y="474" class="rotulo-lugar">Esclusa de Vedre</text>
+  </g>
+  <g class="marcador" data-entrada="archivo-de-nombres">
+    <circle cx="214" cy="588" r="14" class="zona-clic-area"/>
+    <path d="M200,598 L228,598" class="cordel"/><circle cx="206" cy="598" r="2" class="nudo"/><circle cx="214" cy="598" r="2" class="nudo"/><circle cx="222" cy="598" r="2" class="nudo"/>
+    <text x="214" y="612" class="rotulo-lugar centro">Archivo de nombres</text>
+  </g>
+</g>
+
+<!-- ── LUGARES MENORES: solo se ven al acercarse (generados desde contenido/lugares) ─────────── -->
+<g class="menores">
+  <g class="marcador menor" data-entrada="asa" data-desde="reparto"><circle cx="425" cy="525" r="7" class="zona-clic-area"/><circle cx="425" cy="525" r="1.6" class="punto-menor"/><text x="425" y="532.5" class="rotulo-menor">Asa</text></g>
+  <g class="marcador menor" data-entrada="bocamina-de-sarn" data-desde="reparto"><circle cx="700" cy="62" r="7" class="zona-clic-area"/><circle cx="700" cy="62" r="1.6" class="punto-menor"/><text x="700" y="69.5" class="rotulo-menor">Bocamina de Sarn</text></g>
+  <g class="marcador menor" data-entrada="campamentos-de-oruz-y-teme" data-desde="reparto"><circle cx="648" cy="580" r="7" class="zona-clic-area"/><circle cx="648" cy="580" r="1.6" class="punto-menor"/><text x="648" y="587.5" class="rotulo-menor">Campamentos de Oruz y Teme</text></g>
+  <g class="marcador menor" data-entrada="canteras-de-brenna" data-desde="reparto"><circle cx="48" cy="46" r="7" class="zona-clic-area"/><circle cx="48" cy="46" r="1.6" class="punto-menor"/><text x="48" y="53.5" class="rotulo-menor">Canteras de Brenna</text></g>
+  <g class="marcador menor" data-entrada="casa-ordaz" data-desde="vigilia"><circle cx="285" cy="236" r="7" class="zona-clic-area"/><circle cx="285" cy="236" r="1.6" class="punto-menor"/><text x="285" y="243.5" class="rotulo-menor">Casa Ordaz</text></g>
+  <g class="marcador menor" data-entrada="ermita-del-bienaventurado" data-desde="banquete"><circle cx="128" cy="178" r="7" class="zona-clic-area"/><circle cx="128" cy="178" r="1.6" class="punto-menor"/><text x="128" y="185.5" class="rotulo-menor">Ermita del Bienaventurado</text></g>
+  <g class="marcador menor" data-entrada="faro-de-la-boca" data-desde="reparto"><circle cx="152" cy="586" r="7" class="zona-clic-area"/><circle cx="152" cy="586" r="1.6" class="punto-menor"/><text x="152" y="593.5" class="rotulo-menor">Faro de la Boca</text></g>
+  <g class="marcador menor" data-entrada="feria-de-kossa" data-desde="reparto"><circle cx="585" cy="660" r="7" class="zona-clic-area"/><circle cx="585" cy="660" r="1.6" class="punto-menor"/><text x="585" y="667.5" class="rotulo-menor">Feria de Kossa</text></g>
+  <g class="marcador menor" data-entrada="fundicion-de-hesk" data-desde="reparto"><circle cx="640" cy="120" r="7" class="zona-clic-area"/><circle cx="640" cy="120" r="1.6" class="punto-menor"/><text x="640" y="127.5" class="rotulo-menor">Hesk, la fundición</text></g>
+  <g class="marcador menor" data-entrada="galeria-de-ulvar" data-desde="reparto"><circle cx="880" cy="250" r="7" class="zona-clic-area"/><circle cx="880" cy="250" r="1.6" class="punto-menor"/><text x="880" y="257.5" class="rotulo-menor">Ulvar, la galería de las placas</text></g>
+  <g class="marcador menor" data-entrada="granero-de-pie-de-monte" data-desde="reparto"><circle cx="590" cy="252" r="7" class="zona-clic-area"/><circle cx="590" cy="252" r="1.6" class="punto-menor"/><text x="590" y="259.5" class="rotulo-menor">Granero de Pie de Monte</text></g>
+  <g class="marcador menor" data-entrada="isla-de-ysme" data-desde="reparto"><circle cx="140" cy="500" r="7" class="zona-clic-area"/><circle cx="140" cy="500" r="1.6" class="punto-menor"/><text x="140" y="507.5" class="rotulo-menor">Isla de Ysmé</text></g>
+  <g class="marcador menor" data-entrada="molinos-del-sied" data-desde="reparto"><circle cx="322" cy="146" r="7" class="zona-clic-area"/><circle cx="322" cy="146" r="1.6" class="punto-menor"/><text x="322" y="153.5" class="rotulo-menor">Molinos del Sied</text></g>
+  <g class="marcador menor" data-entrada="penas-de-oter" data-desde="reparto"><circle cx="455" cy="38" r="7" class="zona-clic-area"/><circle cx="455" cy="38" r="1.6" class="punto-menor"/><text x="455" y="45.5" class="rotulo-menor">Peñas de Oter</text></g>
+  <g class="marcador menor" data-entrada="piedra-del-callado" data-desde="ruptura"><circle cx="700" cy="470" r="7" class="zona-clic-area"/><circle cx="700" cy="470" r="1.6" class="punto-menor"/><text x="700" y="477.5" class="rotulo-menor">Piedra del Callado</text></g>
+  <g class="marcador menor" data-entrada="puente-del-paso" data-desde="reparto"><circle cx="740" cy="372" r="7" class="zona-clic-area"/><circle cx="740" cy="372" r="1.6" class="punto-menor"/><text x="740" y="379.5" class="rotulo-menor">Puente del Paso</text></g>
+  <g class="marcador menor" data-entrada="puerto-de-lirn" data-desde="reparto"><circle cx="222" cy="652" r="7" class="zona-clic-area"/><circle cx="222" cy="652" r="1.6" class="punto-menor"/><text x="222" y="659.5" class="rotulo-menor">Lirn, el puerto</text></g>
+  <g class="marcador menor" data-entrada="salinas-de-maro" data-desde="reparto"><circle cx="365" cy="668" r="7" class="zona-clic-area"/><circle cx="365" cy="668" r="1.6" class="punto-menor"/><text x="365" y="675.5" class="rotulo-menor">Salinas de Maro</text></g>
+  <g class="marcador menor" data-entrada="torre-de-merre" data-desde="reparto"><circle cx="905" cy="90" r="7" class="zona-clic-area"/><circle cx="905" cy="90" r="1.6" class="punto-menor"/><text x="905" y="97.5" class="rotulo-menor">Torre de cálculo de Merre</text></g>
+  <g class="marcador menor" data-entrada="ulme" data-desde="reparto"><circle cx="262" cy="78" r="7" class="zona-clic-area"/><circle cx="262" cy="78" r="1.6" class="punto-menor"/><text x="262" y="85.5" class="rotulo-menor">Ulme</text></g>
+  <g class="marcador menor" data-entrada="vetas-viejas-de-ahar" data-desde="reparto"><circle cx="235" cy="372" r="7" class="zona-clic-area"/><circle cx="235" cy="372" r="1.6" class="punto-menor"/><text x="235" y="379.5" class="rotulo-menor">Vetas viejas de Ahar</text></g>
+</g>
+
+<!-- ── DESDE LA RUPTURA: los siete clanes ──────────────────────────────────────────────────── -->
+<g data-desde="ruptura" class="clanes" data-entrada="estepa-de-kadem">
+  <path d="M577,430 C587,500 562,580 582,690" class="trazo"/>
+  <path d="M647,430 C632,520 662,600 642,690" class="trazo"/>
+  <path d="M720,428 C735,490 700,580 715,690" class="trazo"/>
+  <path d="M791,432 C776,520 806,610 791,690" class="trazo"/>
+  <path d="M861,424 C876,500 851,580 866,690" class="trazo"/>
+  <path d="M931,430 C921,520 946,600 931,690" class="trazo"/>
+  <text x="905" y="660" class="rotulo-nota">siete clanes</text>
+</g>
+
+<!-- ── DESDE EL AÑO 202: el cierre de Cadaval ─────────────────────────────────────────────── -->
+<g data-desde="cadaval" data-entrada="marca-de-cadaval">
+  <circle cx="352" cy="290" r="36" class="cierre trazo"/>
+  <circle cx="352" cy="290" r="36" fill="url(#trama-cierre)" opacity="0.35"/>
+</g>
+<g data-desde="cadaval" data-oculta-si="pliego-ambaz acta-cavir">
+  <text x="352" y="246" class="rotulo-nota">cierre sanitario · peste</text>
+</g>
+<g data-desde="cadaval" data-requiere="acta-cavir" data-oculta-si="pliego-ambaz">
+  <text x="352" y="246" class="rotulo-exaltado">peste traída del delta</text>
+  <path d="M344,462 C368,420 378,370 366,326" class="flecha-tinta trazo" marker-end="url(#punta-tinta)"/>
+</g>
+<g data-desde="cadaval" data-requiere="pliego-ambaz">
+  <text x="352" y="234" class="rotulo-nota tachado-svg">cierre sanitario · peste</text>
+  <line x1="290" y1="230" x2="414" y2="230" class="linea-tachado trazo"/>
+  <text x="352" y="250" class="rotulo-verdad">4.906 recibos · dos sueldos por cabeza</text>
+</g>
+
+<!-- ── DESDE EL AÑO 209: la veta y el contrabando ─────────────────────────────────────────── -->
+<g data-desde="veta">
+  <circle cx="366" cy="300" r="7" class="veta-pulso" data-entrada="veta"/>
+  <path d="M356,298 C364,330 372,380 372,400 C370,440 345,462 338,470 C315,505 270,530 240,560" class="contrabando trazo" data-entrada="rio-sied"/>
+  <text x="394" y="425" class="rotulo-nota" transform="rotate(80 394 425)">ruta de Ordaz</text>
+</g>
+
+<!-- ── DESDE EL BANQUETE ──────────────────────────────────────────────────────────────────── -->
+<g data-desde="banquete" data-entrada="banquete">
+  <circle cx="390" cy="178" r="17" class="anillo-banquete trazo"/>
+  <text x="410" y="198" class="rotulo-nota inicio">banquete del solsticio</text>
+</g>
+<g data-desde="banquete" data-requiere="pliego-riz">
+  <text x="410" y="214" class="rotulo-verdad inicio">la guardia se retiró del patio</text>
+</g>
+<g data-desde="banquete" data-requiere="acta-sedal" data-oculta-si="pliego-riz">
+  <text x="410" y="214" class="rotulo-exaltado inicio">casa mártir</text>
+</g>
+
+<!-- ── LA SEGUNDA VIGILIA: el asedio ──────────────────────────────────────────────────────── -->
+<g data-desde="vigilia" data-entrada="vigilia">
+  <path d="M330,300 C330,360 345,420 333,452" class="flecha-fria trazo" marker-end="url(#punta-fria)"/>
+  <path d="M420,190 C440,290 420,390 356,458" class="flecha-fria trazo" marker-end="url(#punta-fria)"/>
+  <circle cx="338" cy="470" r="24" class="asedio trazo"/>
+  <text x="455" y="300" class="rotulo-frio">vanguardia de Arbelas</text>
+</g>
+<g data-desde="vigilia" data-requiere="pliego-ambaz" data-entrada="la-forja">
+  <path d="M765,212 C650,250 520,280 430,300" class="suministro trazo" marker-end="url(#punta-fria)"/>
+  <path d="M772,214 C700,330 520,430 364,468" class="suministro trazo" marker-end="url(#punta-fria)"/>
+  <text x="600" y="246" class="rotulo-frio" transform="rotate(-14 600 246)">refinado a los dos bandos</text>
+</g>
+<g data-desde="vigilia" data-requiere="acta-sedal" data-oculta-si="pliego-riz">
+  <text x="338" y="510" class="rotulo-exaltado">la horca de Vedre</text>
+</g>
+</svg>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>El Cerco — Archivo público de Vástara</title>
+  <meta name="description" content="El archivo público de Vástara: lo que cada pueblo cuenta de sí mismo y los pliegos que lo desmienten.">
+  <link rel="stylesheet" href="estilos/base.css">
+  <link rel="stylesheet" href="estilos/mapa.css">
+  <link rel="stylesheet" href="estilos/panel.css">
+  <link rel="stylesheet" href="estilos/libro.css">
+  <link rel="stylesheet" href="estilos/secciones.css">
+  <link rel="stylesheet" href="estilos/narrativa.css">
+  <link rel="stylesheet" href="estilos/revelar.css">
+  <link rel="stylesheet" href="estilos/desmentido.css">
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+
+  <header class="cabecera">
+    <a class="marca" href="#/inicio">
+      <span class="marca-titulo">El Cerco</span>
+      <span class="marca-sub">Archivo público de Vástara · custodiado por el arciprestazgo de la Mirada Alta</span>
+    </a>
+    <nav class="secciones" aria-label="Secciones">
+      <a href="#/mapa" data-vista="mapa">Mapa</a>
+      <a href="#/historia" data-vista="historia">Historia</a>
+      <a href="#/relatos" data-vista="relatos">Relatos</a>
+      <a href="#/lugares" data-vista="lugares">Lugares</a>
+      <a href="#/personajes" data-vista="personajes">Personajes</a>
+      <a href="#/costumbres" data-vista="costumbres">Costumbres</a>
+      <a href="#/archivo" data-vista="archivo">Archivo</a>
+    </nav>
+    <button id="boton-sello" class="boton-sello" type="button">
+      <span class="punto-lacre" aria-hidden="true"></span>Romper un sello
+    </button>
+  </header>
+
+  <main class="vistas">
+    <section id="vista-inicio" class="vista vista-narrativa" aria-label="Inicio" hidden></section>
+    <section id="vista-mapa" class="vista vista-mapa" aria-label="Mapa de Vástara">
+      <div id="mapa" class="mapa"></div>
+      <div class="controles-mapa" aria-label="Zoom">
+        <button id="acercar" type="button" aria-label="Acercar">+</button>
+        <button id="alejar" type="button" aria-label="Alejar">−</button>
+        <button id="ver-todo" type="button" aria-label="Ver todo el mapa">⤢</button>
+      </div>
+      <p class="pista-mapa">Rueda o pellizco para acercarte · arrastra para moverte</p>
+      <ol id="cronologia" class="cronologia" aria-label="Cronología"></ol>
+    </section>
+    <section id="vista-historia" class="vista vista-historia" aria-label="Historia" hidden></section>
+    <section id="vista-relatos" class="vista vista-narrativa" aria-label="Relatos" hidden></section>
+    <section id="vista-lugares" class="vista vista-papel" aria-label="Lugares" hidden></section>
+    <section id="vista-personajes" class="vista vista-papel" aria-label="Personajes" hidden></section>
+    <section id="vista-costumbres" class="vista vista-papel" aria-label="Costumbres" hidden></section>
+    <section id="vista-archivo" class="vista vista-papel" aria-label="Archivo" hidden></section>
+  </main>
+
+  <aside id="panel" class="panel" aria-live="polite"></aside>
+
+  <dialog id="sello" class="dialogo-sello" aria-labelledby="titulo-sello">
+    <form id="form-sello" class="form-sello">
+      <h2 id="titulo-sello">Romper un sello</h2>
+      <p>Escribe el código del pliego o del acta tal como aparece en el juego.</p>
+      <input id="codigo" name="codigo" autocomplete="off" spellcheck="false" placeholder="SELLO-XXXX-0000" aria-label="Código">
+      <p id="aviso-sello" class="aviso" aria-live="polite"></p>
+      <div class="acciones">
+        <button type="button" class="secundario" data-cerrar>Cancelar</button>
+        <button type="submit">Romper el sello</button>
+      </div>
+    </form>
+    <div id="revelacion" class="revelacion" hidden></div>
+  </dialog>
+
+</body>
+</html>

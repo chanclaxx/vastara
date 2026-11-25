@@ -1,0 +1,29 @@
+{
+  "id": "banquete",
+  "tipo": "epoca",
+  "titulo": "El banquete del solsticio",
+  "anio": "Solsticio del 214",
+  "voz": "solania",
+  "lamina": {
+    "x": 390,
+    "y": 180,
+    "ancho": 110,
+    "pie": "El asiento vacío y el pliego abierto"
+  },
+  "oficial": "En el banquete de la Casa Arbelas, manos pagadas desde el delta degüellan al Testigo Perán Vela. Su pliego se abre esa misma noche y acusa al coronel Ordaz de vender la veta de Cadaval a la Casa Vedrani.\n\nOrdaz es ejecutado nueve días después. La regente pide abrir el registro del delta y entregar a Teodra Vedrani. El Marjal se niega, y su negativa es su confesión.",
+  "exaltada": {
+    "por": "acta-sedal",
+    "texto": "En el banquete de la Casa Arbelas, manos pagadas desde el delta degüellan al bienaventurado Perán Vela. Fue la primera sangre de Solania vertida por el Marjal en esta guerra.\n\nNo fue la última. En la Esclusa de Vedre los mercaderes cuelgan ya a los hijos del altiplano, y el alférez Bruno Sedal, que hizo guardia aquella noche en la casa, ha muerto en su horca."
+  },
+  "verdad": {
+    "por": "pliego-riz",
+    "texto": "«Una hora antes del brindis el mayordomo de la casa retiró la guardia del patio de las cocinas. El alférez preguntó por qué y le dijeron que eran órdenes de la casa. El patio se quedó sin nadie.»\n\n«A medianoche el Testigo Vela salió solo al patio. Nadie lo había llamado.»"
+  },
+  "enlaces": [
+    "casa-arbelas",
+    "peran-vela",
+    "marco-de-arbelas",
+    "pliego-peran"
+  ],
+  "imagen": "imagenes/epocas/banquete.webp"
+}

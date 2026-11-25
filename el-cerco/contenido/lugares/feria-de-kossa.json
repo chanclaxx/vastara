@@ -1,0 +1,18 @@
+{
+  "id": "feria-de-kossa",
+  "tipo": "lugar",
+  "titulo": "Feria de Kossa",
+  "subtitulo": "Estepa de Kadem · el llano de los tratos",
+  "voz": "estepa",
+  "territorio": "estepa",
+  "pos": [
+    585,
+    660
+  ],
+  "menor": true,
+  "oficial": "El Callado dice: en Kossa se contrata. Una vez al año los siete clanes bajan a este llano caballos, ganado y compañías, y quien tiene con qué pagar elige. La palabra dada aquí vale para todo el año.\n\nEste año la feria duró el doble. Vinieron compradores del altiplano y del delta a la vez.",
+  "enlaces": [
+    "estepa-de-kadem",
+    "corredor-de-la-estepa"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "canteras-de-brenna",
+  "tipo": "lugar",
+  "titulo": "Canteras de Brenna",
+  "subtitulo": "Solania · norte del altiplano",
+  "voz": "solania",
+  "territorio": "solania",
+  "pos": [
+    48,
+    46
+  ],
+  "menor": true,
+  "oficial": "Las canteras de piedra clara que levantaron la Mirada Alta, sus murallas y su torre. Se trabajan en terrazas desde antes del Reparto; los canteros dicen que en la piedra de abajo hay marcas que no son de Solania.\n\nDe Brenna salió también la losa de Solania que sella el pozo de Ahar.",
+  "enlaces": [
+    "mirada-alta",
+    "pozo-sellado",
+    "reparto"
+  ]
+}

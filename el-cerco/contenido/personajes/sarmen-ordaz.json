@@ -1,0 +1,38 @@
+{
+  "id": "sarmen-ordaz",
+  "tipo": "personaje",
+  "titulo": "Sarmen Ordaz",
+  "subtitulo": "Coronel, gobernador de Cadaval",
+  "frase": "Cerré Cadaval para que el reino siguiera abierto.",
+  "voz": "solania",
+  "faccion": "solania",
+  "oficial": "Coronel del altiplano y gobernador de la Marca de Cadaval. En el 202 dirigió el cierre sanitario que salvó al reino de la peste. En el 209 ocultó la veta de Cadaval y la vendió al Marjal durante cinco años.\n\nEl pliego del bienaventurado Perán Vela lo condenó. Fue ejecutado nueve días después de abrirse.",
+  "verdad": {
+    "por": "pliego-ambaz",
+    "texto": "«Los recibos de la prima de Cadaval, dos sueldos por cabeza, llevan al pie la orden del coronel Sarmen Ordaz. El teniente los ha guardado desde entonces.»"
+  },
+  "enlaces": [
+    "marca-de-cadaval",
+    "cadaval",
+    "peran-vela"
+  ],
+  "imagen": "imagenes/personajes/sarmen-ordaz.webp",
+  "red": [
+    {
+      "id": "peran-vela",
+      "como": "Su Testigo, que lo acusó"
+    },
+    {
+      "id": "marca-de-cadaval",
+      "como": "La comarca que gobernó"
+    },
+    {
+      "id": "teodra-vedrani",
+      "como": "La casa a la que vendió la veta"
+    },
+    {
+      "id": "casa-ordaz",
+      "como": "Su residencia, confiscada"
+    }
+  ]
+}

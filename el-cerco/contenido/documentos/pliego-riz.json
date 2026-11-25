@@ -1,0 +1,16 @@
+{
+  "id": "pliego-riz",
+  "tipo": "documento",
+  "titulo": "Pliego de Tobal Riz",
+  "subtitulo": "Testigo del alférez Bruno Sedal · hijo de un carretero de la Mirada Alta",
+  "clase": "pliego",
+  "acceso": "sello",
+  "cita": "el pliego de Tobal Riz, Testigo del alférez Bruno Sedal",
+  "texto": "Solsticio del 214. El alférez hace guardia en la Casa Arbelas, en el ala de las cocinas.\n\nEsa tarde el Testigo Vela bajó a los cuartos de los esteparios con la bolsa de su soldada y volvió sin ella.\n\nUna hora antes del brindis el mayordomo de la casa retiró la guardia del patio de las cocinas. El alférez preguntó por qué y le dijeron que eran órdenes de la casa. El patio se quedó sin nadie. El alférez no lo informó.\n\nA medianoche el Testigo Vela salió solo al patio. Nadie lo había llamado. El alférez lo vio cruzar. No llevaba miedo. Llevaba prisa.\n\nArbelas pasó la noche del banquete sin dormir. Pidió tinta tres veces y no escribió nada. Al amanecer preguntó al alférez quién había retirado la guardia del patio. El alférez le dijo que el mayordomo. Arbelas no preguntó nada más.\n\nSegunda Vigilia. El alférez cae prisionero en el río, frente a Vedre. Nos llevan a la puerta de guardia de la Esclusa.",
+  "enlaces": [
+    "banquete",
+    "casa-arbelas",
+    "peran-vela",
+    "marco-de-arbelas"
+  ]
+}

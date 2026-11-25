@@ -1,0 +1,20 @@
+{
+  "id": "piedra-del-callado",
+  "tipo": "lugar",
+  "titulo": "Piedra del Callado",
+  "subtitulo": "Estepa de Kadem · donde se rompió la estepa",
+  "voz": "estepa",
+  "territorio": "estepa",
+  "pos": [
+    700,
+    470
+  ],
+  "menor": true,
+  "desde": "ruptura",
+  "oficial": "El Callado dice: aquí habló Orhan, Callado de los siete pastos, en el año 112. Pronunció una sola frase, como permite la ley, y murió al decirla. La piedra marca el sitio.\n\nNadie repite la frase. La Lengua que la tradujo aquel día la grabó en la piedra con un cuchillo; la lluvia la ha borrado y nadie la ha vuelto a escribir.",
+  "enlaces": [
+    "boca-cerrada",
+    "ruptura",
+    "estepa-de-kadem"
+  ]
+}

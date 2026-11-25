@@ -1,0 +1,19 @@
+{
+  "id": "campamentos-de-oruz-y-teme",
+  "tipo": "lugar",
+  "titulo": "Campamentos de Oruz y Teme",
+  "subtitulo": "Estepa de Kadem · un mismo clan",
+  "voz": "estepa",
+  "territorio": "estepa",
+  "pos": [
+    648,
+    580
+  ],
+  "menor": true,
+  "oficial": "El Callado dice: Oruz y Teme son hijos del mismo pasto y montan bajo el mismo estandarte. Sus campamentos están a medio día uno del otro, y sus Lenguas comen juntas en la feria.\n\nEste año sus compañías no han vuelto a casa. Las dos sirven en la guerra del delta.",
+  "enlaces": [
+    "estepa-de-kadem",
+    "feria-de-kossa",
+    "boca-cerrada"
+  ]
+}

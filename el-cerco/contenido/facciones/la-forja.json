@@ -1,0 +1,19 @@
+{
+  "id": "la-forja",
+  "tipo": "faccion",
+  "titulo": "La Forja",
+  "subtitulo": "La cordillera hueca · el Ancestro",
+  "lema": "El Ancestro no pide fe. Pide exactitud.",
+  "voz": "forja",
+  "oficial": "Liga de gremios bajo la montaña hueca, gobernada por sus maestres, sin rey ni nobleza. La Forja es la única que sabe refinar el Ícor y no toma partido: vende acero y refinado a quien lo paga, y antes de cada obra o campaña publica su cuota, el número exacto de vidas que costará, grabado en una placa y firmado por quien lo calculó. Nadie marcha engañado; por eso en la Forja no hay motines.\n\nEl Ancestro no pide fe. Pide exactitud.",
+  "verdad": {
+    "por": "pliego-ambaz",
+    "texto": "«El factor gremial entregó al teniente cuarenta gotas de refinado para la soldada. Los pagos a las compañías no se hacen con plata: se hacen con refinado de la Forja. La plata se quedó en el cofre.»\n\n«El libro del factor tenía dos columnas, Vanguardia y Vedre. Las dos tenían entregas de la misma semana. Las máquinas de asedio iban en la primera.»"
+  },
+  "enlaces": [
+    "registro-de-costo",
+    "galerias-de-la-forja",
+    "emeric-sault"
+  ],
+  "imagen": "imagenes/territorios/la-forja.webp"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "ulme",
+  "tipo": "lugar",
+  "titulo": "Ulme",
+  "subtitulo": "Solania · el pueblo de los carreteros",
+  "voz": "solania",
+  "territorio": "solania",
+  "pos": [
+    262,
+    78
+  ],
+  "menor": true,
+  "oficial": "Pueblo de carreteros en el camino del norte. Sus carros llevan el grano del altiplano hasta los embarcaderos del Sied, y sus hijos, cuando entran en la tropa, suelen salir en el sorteo de los Testigos: saben leer las marcas de los sacos y escribir cuentas.\n\nEn Ulme hay más Testigos por casa que en ninguna otra aldea de Solania. Las madres cosen las fundas de los pliegos.",
+  "enlaces": [
+    "cuenta-de-la-mirada",
+    "mirada-alta",
+    "rio-sied"
+  ]
+}

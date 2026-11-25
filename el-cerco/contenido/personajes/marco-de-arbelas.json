@@ -1,0 +1,43 @@
+{
+  "id": "marco-de-arbelas",
+  "tipo": "personaje",
+  "titulo": "Marco de Arbelas",
+  "subtitulo": "Mando de la vanguardia",
+  "frase": "No venimos a conquistar el delta. Venimos a leerlo.",
+  "voz": "solania",
+  "faccion": "solania",
+  "oficial": "Hijo de la Casa Arbelas, treinta y un años, mando de la vanguardia que abre el río hacia el archivo del delta. Fue anfitrión del banquete donde cayó el bienaventurado Perán Vela, y el primero en pedir que su pliego se leyera en voz alta.\n\nManda por la corona y por la memoria del Testigo.",
+  "exaltada": {
+    "por": "acta-sedal",
+    "texto": "El vengador de Perán Vela. Abrió su mesa al bienaventurado y vio cómo el delta se lo arrebataba; ahora el delta le ha ahorcado también a un alférez de su guardia.\n\nArbelas ha jurado que entrará en el archivo y leerá en voz alta cada nombre que el Marjal quiso callar."
+  },
+  "verdad": {
+    "por": "pliego-riz",
+    "texto": "«Arbelas pasó la noche del banquete sin dormir. Pidió tinta tres veces y no escribió nada. Al amanecer preguntó al alférez quién había retirado la guardia del patio. El alférez le dijo que el mayordomo. Arbelas no preguntó nada más.»"
+  },
+  "enlaces": [
+    "casa-arbelas",
+    "banquete",
+    "esclusa-de-vedre",
+    "solania"
+  ],
+  "imagen": "imagenes/personajes/marco-de-arbelas.webp",
+  "red": [
+    {
+      "id": "peran-vela",
+      "como": "Cayó en su banquete"
+    },
+    {
+      "id": "casa-arbelas",
+      "como": "Su casa"
+    },
+    {
+      "id": "halce-vedrani",
+      "como": "Defiende la esclusa que debe abrir"
+    },
+    {
+      "id": "teodra-vedrani",
+      "como": "La corona exige su entrega"
+    }
+  ]
+}

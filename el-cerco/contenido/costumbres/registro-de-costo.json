@@ -1,0 +1,18 @@
+{
+  "id": "registro-de-costo",
+  "tipo": "costumbre",
+  "titulo": "El Registro de Costo",
+  "subtitulo": "Tradición de la Forja",
+  "voz": "forja",
+  "oficial": "El Ancestro no pide fe, pide exactitud. Antes de cada obra o campaña la Liga calcula la cuota, el número exacto de vidas que costará, y la graba en una placa firmada por el maestre que la calculó. La placa se cuelga en la plaza antes de empezar.\n\nNadie marcha engañado. Quien va, va sabiendo. Por eso en la Forja no hay motines, y por eso sus cifras se cumplen: en doscientos catorce años, el Ancestro no se ha equivocado una sola vez.",
+  "verdad": {
+    "por": "pliego-ambaz",
+    "texto": "«El factor dejó al teniente una copia de la placa del asedio, firmada E. Sault. La cifra es una sola para los dos bandos.»\n\n«El teniente preguntó qué pasaba si la vanguardia gastaba menos vidas de las firmadas. El factor dijo que entonces la Liga cerraba el registro. No dijo cómo.»"
+  },
+  "enlaces": [
+    "la-forja",
+    "emeric-sault",
+    "galerias-de-la-forja"
+  ],
+  "imagen": "imagenes/costumbres/registro-de-costo.webp"
+}

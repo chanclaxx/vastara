@@ -1,0 +1,19 @@
+{
+  "id": "puente-del-paso",
+  "tipo": "lugar",
+  "titulo": "Puente del Paso",
+  "subtitulo": "La Cuenca del Cerco · el corredor",
+  "voz": "estepa",
+  "territorio": "cuenca",
+  "pos": [
+    740,
+    372
+  ],
+  "menor": true,
+  "oficial": "El Callado dice: el único puente sobre la falla es del clan que guarda el corredor. Es de cuerda y tablas, y se cruza de uno en uno. Quien cruza paga; quien paga cruza.\n\nEl puente no se cierra a nadie. Desde la Segunda Vigilia lo cruzan de noche carretas con lona, camino del altiplano. Pagan el doble y no dicen qué llevan.",
+  "enlaces": [
+    "corredor-de-la-estepa",
+    "cuenca-del-cerco",
+    "la-forja"
+  ]
+}

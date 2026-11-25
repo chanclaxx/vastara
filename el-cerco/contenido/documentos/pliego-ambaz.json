@@ -1,0 +1,17 @@
+{
+  "id": "pliego-ambaz",
+  "tipo": "documento",
+  "titulo": "Pliego de Ruel Ambaz",
+  "subtitulo": "Testigo del teniente Osmar Cavir, pagador de la vanguardia · hijo de un tratante de ganado",
+  "clase": "pliego",
+  "acceso": "sello",
+  "cita": "el pliego de Ruel Ambaz, Testigo del teniente Osmar Cavir",
+  "texto": "En el otoño del 202 el teniente pagó la prima del cierre de Cadaval: dos sueldos por cabeza, contra recibo de compañía y por orden del coronel Ordaz. Hizo cuatro mil novecientos seis recibos. Ninguno dice peste. El teniente los ha guardado desde entonces.\n\nSegunda Vigilia, día 3. El factor gremial entregó al teniente cuarenta gotas de refinado para la soldada. Los pagos a las compañías no se hacen con plata: se hacen con refinado de la Forja. La plata se quedó en el cofre.\n\nEl libro del factor tenía dos columnas, Vanguardia y Vedre. Las dos tenían entregas de la misma semana. Las máquinas de asedio iban en la primera.\n\nLa compañía Oruz cobra de la vanguardia. La compañía Teme, del mismo clan, cobra del Marjal en Vedre. El factor dice que a las dos se les paga con gotas del mismo lote. La Lengua del clan firmó los dos contratos el mismo día.\n\nEl factor dejó al teniente una copia de la placa del asedio, firmada E. Sault. La cifra es una sola para los dos bandos. Al pie, en letra pequeña: “Saldo a cargo de la Liga”. El teniente preguntó qué pasaba si la vanguardia gastaba menos vidas de las firmadas. El factor dijo que entonces la Liga cerraba el registro. No dijo cómo.\n\nEl teniente cae prisionero con el cofre. Nos llevan a la puerta de guardia de la Esclusa.",
+  "enlaces": [
+    "marca-de-cadaval",
+    "la-forja",
+    "registro-de-costo",
+    "estepa-de-kadem",
+    "emeric-sault"
+  ]
+}

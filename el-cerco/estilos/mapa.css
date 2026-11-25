@@ -1,0 +1,166 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   MAPA: el relieve renderizado en Blender (mapa/relieve.webp, y relieve_alta.webp al acercarse)
+   y, encima, la capa interactiva de mapa/mapa.svg. La cámara es el viewBox (js/mapa.js).
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.vista-mapa { overflow: hidden; background: var(--mesa); }
+.mapa { position: absolute; inset: 0 0 76px 0; }      /* deja sitio a la cronología */
+.mapa svg {
+  width: 100%; height: 100%;
+  display: block;
+  background: var(--mesa);
+  touch-action: none;          /* el arrastre y el pellizco los gestiona js/mapa.js */
+  cursor: grab;
+  user-select: none;
+}
+.mapa svg.arrastrando { cursor: grabbing; }
+
+/* Controles de zoom, pista y cronología, flotando sobre el mapa */
+.controles-mapa {
+  position: absolute; right: 18px; bottom: 96px;
+  display: flex; flex-direction: column; gap: 6px; z-index: 5;
+}
+.controles-mapa button {
+  width: 40px; height: 40px;
+  background: rgba(244, 238, 226, 0.92); color: var(--tinta);
+  border: 1px solid var(--papel-sombra); font-size: 20px; line-height: 1;
+  box-shadow: 0 4px 14px #00000060;
+}
+.controles-mapa button:hover { background: var(--papel); }
+.pista-mapa {
+  position: absolute; left: 50%; top: 12px; transform: translateX(-50%);
+  margin: 0; padding: 5px 12px; z-index: 5; pointer-events: none;
+  background: rgba(18, 14, 11, 0.6); color: var(--papel-sombra);
+  font-size: 13px; border-radius: 2px; white-space: nowrap;
+}
+.cronologia {
+  position: absolute; left: 0; right: 0; bottom: 0; z-index: 5;
+  list-style: none; margin: 0; padding: 10px 20px 12px;
+  display: flex; gap: 6px; overflow-x: auto;
+  background: linear-gradient(to top, rgba(18, 14, 11, 0.95) 55%, rgba(18, 14, 11, 0));
+}
+.epoca {
+  background: none; border: none; color: var(--tinta-3);
+  text-align: left; padding: 6px 12px 6px 14px;
+  border-left: 1px solid #4a3e33;
+  white-space: nowrap;
+}
+.epoca .anio { display: block; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; }
+.epoca .titulo { display: block; font-family: var(--letra-documento); font-size: 16px; color: var(--papel-sombra); }
+.epoca:hover .titulo { color: var(--papel); }
+.epoca.actual { border-left: 3px solid var(--papel); padding-left: 12px; }
+.epoca.actual .anio { color: var(--papel-sombra); }
+.epoca.actual .titulo { color: var(--papel); }
+@media (max-width: 820px) {
+  .pista-mapa { display: none; }
+  .controles-mapa { right: 12px; bottom: 84px; }
+}
+
+/* Aparecer y desaparecer según la época y los sellos */
+#mapa-svg [data-desde], #mapa-svg [data-hasta], #mapa-svg [data-requiere], #mapa-svg [data-oculta-si] {
+  transition: opacity 0.7s ease;
+}
+#mapa-svg .oculto { opacity: 0; pointer-events: none; }
+#mapa-svg [data-entrada] { cursor: pointer; }
+
+/* Antes del Reparto: el mundo de hoy queda velado */
+.velo-antiguo { fill: #efe7d7; opacity: 0.74; pointer-events: none; }
+
+/* Zonas de clic invisibles */
+.zona-clic { fill: none; stroke: transparent; stroke-width: 16; }
+.zona-area, .zona-clic-area { fill: transparent; }
+
+/* Territorios: se tiñen al pasar por encima o al estar abiertos en el panel */
+.tinte { opacity: 0; transition: opacity 0.3s; }
+.tinte-solania { fill: #e8d7a8; }
+.tinte-forja { fill: #c9d3da; }
+.tinte-marjal { fill: #cfdcc4; }
+.tinte-estepa { fill: #eadcb5; }
+.territorio:hover .tinte { opacity: 0.22; }
+.territorio.resaltado .tinte { opacity: 0.3; }
+.frontera-halo { fill: none; stroke: rgba(244, 238, 226, 0.5); stroke-width: 3.6; }
+.frontera { fill: none; stroke: var(--tinta); stroke-width: 1.2; stroke-dasharray: 7 4; }
+
+/* Rótulos con halo de papel, como en un mapa impreso */
+#mapa-svg text {
+  font-family: var(--letra-documento);
+  paint-order: stroke;
+  stroke: rgba(244, 238, 226, 0.85);
+  stroke-width: calc(3px * var(--k, 1));
+  stroke-linejoin: round;
+}
+/* Al acercarse, las líneas conservan su grosor en pantalla y los rótulos casi su tamaño (--k = zoom^−0,9) */
+#mapa-svg path, #mapa-svg circle, #mapa-svg line, #mapa-svg use { vector-effect: non-scaling-stroke; }
+
+/* Lugares menores: aparecen al acercarse */
+.menores .marcador { opacity: 0; pointer-events: none; transition: opacity 0.4s; }
+#mapa-svg.cerca .menores .marcador:not(.oculto) { opacity: 1; pointer-events: auto; }
+.rotulo-menor { font-size: calc(12px * var(--k, 1)); fill: var(--tinta); text-anchor: middle; font-style: italic; }
+.punto-menor { fill: var(--tinta); stroke: var(--papel); stroke-width: 1; }
+.marcador.menor.resaltado .rotulo-menor { text-decoration: underline; }
+.rotulo-reino { font-family: var(--letra-titulo); font-size: calc(32px * var(--k, 1)); letter-spacing: 9px; fill: var(--tinta); text-anchor: middle; }
+.rotulo-faccion { font-family: var(--letra-titulo); font-size: calc(24px * var(--k, 1)); letter-spacing: calc(6px * var(--k, 1)); fill: var(--tinta); text-anchor: middle; stroke-width: calc(4px * var(--k, 1)) !important; }
+.rotulo-cuenca { font-family: var(--letra-titulo); font-size: calc(12px * var(--k, 1)); letter-spacing: 5px; fill: var(--papel); text-anchor: middle; stroke: rgba(18, 14, 11, 0.8) !important; }
+.rotulo-lugar { font-size: calc(14.5px * var(--k, 1)); fill: var(--tinta); }
+.rotulo-lugar.fin { text-anchor: end; }
+.rotulo-lugar.centro { text-anchor: middle; }
+.rotulo-nota { font-style: italic; font-size: calc(12.5px * var(--k, 1)); fill: var(--tinta-2); text-anchor: middle; }
+.rotulo-nota.inicio, .rotulo-verdad.inicio, .rotulo-exaltado.inicio { text-anchor: start; }
+.rotulo-agua { font-style: italic; font-size: calc(13px * var(--k, 1)); fill: #34444a; }
+.rotulo-verdad { font-size: calc(13px * var(--k, 1)); fill: var(--tinta); text-anchor: middle; }
+.rotulo-exaltado { font-style: italic; font-size: calc(13.5px * var(--k, 1)); fill: var(--exaltado); text-anchor: middle; letter-spacing: 0.5px; }
+.rotulo-frio { font-style: italic; font-size: calc(13px * var(--k, 1)); fill: #36434a; text-anchor: middle; }
+.tachado-svg { fill: var(--tinta-3); }
+.marcador.resaltado .rotulo-lugar { text-decoration: underline; }
+
+/* Marcas sobre el relieve */
+.marca-anillo { fill: none; stroke: var(--papel); stroke-width: 1.6; stroke-dasharray: 3 3; }
+.cordel { stroke: var(--indigo); stroke-width: 1.3; }
+.nudo { fill: var(--indigo); }
+.ruta { fill: none; stroke: rgba(244, 238, 226, 0.7); stroke-width: 1.4; stroke-dasharray: 2 6; stroke-linecap: round; }
+.clanes path { fill: none; stroke: rgba(46, 38, 32, 0.55); stroke-width: 1; stroke-dasharray: 3 4; }
+.cierre { fill: none; stroke: var(--tinta); stroke-width: 1.4; stroke-dasharray: 4 3; }
+.trama-oscura { stroke: var(--tinta); }
+.linea-tachado { stroke: var(--tinta); stroke-width: 1.4; }
+.contrabando { fill: none; stroke: var(--papel); stroke-width: 1.8; stroke-dasharray: 1 5; stroke-linecap: round; }
+.anillo-banquete { fill: none; stroke: var(--papel); stroke-width: 1.5; }
+.flecha-tinta { fill: none; stroke: var(--exaltado); stroke-width: 2; stroke-dasharray: 6 4; }
+.flecha-fria { fill: none; stroke: #c9d6de; stroke-width: 1.8; opacity: 0.85; }
+.asedio { fill: none; stroke: #c9d6de; stroke-width: 1.8; stroke-dasharray: 5 4; }
+.suministro { fill: none; stroke: #c9d6de; stroke-width: 1.5; stroke-dasharray: 8 5; }
+.relleno-frio { fill: #c9d6de; }
+.relleno-tinta { fill: var(--exaltado); }
+
+/* La veta late: es lo único que se mueve solo en el mapa */
+.veta-pulso {
+  fill: none;
+  stroke: var(--icor);
+  stroke-width: 2;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: latido 2.6s ease-in-out infinite;
+}
+@keyframes latido {
+  0%, 100% { opacity: 0.3; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.35); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .veta-pulso { animation: none; }
+}
+
+/* ── Cartela de tierra: emblema, nombre y lema al pasar el ratón (js/cartela.js) ── */
+.cartela-tierra {
+  position: absolute; left: 22px; bottom: 98px; z-index: 6; pointer-events: none;
+  display: flex; align-items: center; gap: 16px; padding: 14px 22px 14px 16px;
+  background: rgba(18, 14, 11, 0.86); border: 1px solid #3a3029; backdrop-filter: blur(6px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.55);
+  opacity: 0; transform: translateY(8px); transition: opacity 0.35s, transform 0.35s;
+}
+.cartela-tierra.visible { opacity: 1; transform: none; }
+.cartela-emblema { display: block; width: 58px; height: 58px; color: #b8a684; }
+.cartela-emblema .hueco { fill: #120e0b; }
+.cartela-emblema .nudo { fill: #6f7db0; }
+.cartela-nombre { margin: 0; font-family: var(--letra-titulo); font-size: 22px; letter-spacing: 2px; color: var(--papel); }
+.cartela-lema { margin: 2px 0 0; font-family: var(--letra-documento); font-style: italic; font-size: 15.5px; color: var(--papel-sombra); }
+.cartela-pista { margin: 6px 0 0; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--tinta-3); }
+@media (max-width: 820px) { .cartela-tierra { display: none; } }

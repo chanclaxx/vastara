@@ -1,0 +1,38 @@
+{
+  "id": "emeric-sault",
+  "tipo": "personaje",
+  "titulo": "Emeric Sault",
+  "subtitulo": "Maestre de registro de la Liga",
+  "frase": "Nadie marcha engañado. Para eso firmo.",
+  "voz": "forja",
+  "faccion": "la-forja",
+  "oficial": "Maestre de registro de la Liga. Calcula la cuota de obras y campañas, la firma con su nombre y responde de ella ante el Ancestro. Sus cifras se han cumplido siempre, hasta la última vida.\n\nEs cortés, preciso y no ha levantado la mano contra nadie. Firmó la placa del asedio de Vedre.",
+  "verdad": {
+    "por": "pliego-ambaz",
+    "texto": "«La copia de la placa que el factor entregó al teniente lleva su firma. La cifra es una sola para los dos bandos. Al pie, en letra pequeña: “Saldo a cargo de la Liga”.»"
+  },
+  "enlaces": [
+    "registro-de-costo",
+    "la-forja",
+    "galerias-de-la-forja"
+  ],
+  "imagen": "imagenes/personajes/emeric-sault.webp",
+  "red": [
+    {
+      "id": "registro-de-costo",
+      "como": "La ley que aplica"
+    },
+    {
+      "id": "halce-vedrani",
+      "como": "Calculó la cuota del asedio a su esclusa"
+    },
+    {
+      "id": "galeria-de-ulvar",
+      "como": "Donde se graban sus placas"
+    },
+    {
+      "id": "galerias-de-la-forja",
+      "como": "Donde trabaja la Liga"
+    }
+  ]
+}

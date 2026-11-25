@@ -1,0 +1,19 @@
+{
+  "id": "vetas-viejas-de-ahar",
+  "tipo": "lugar",
+  "titulo": "Vetas viejas de Ahar",
+  "subtitulo": "La Cuenca del Cerco · pared del oeste",
+  "voz": "forja",
+  "territorio": "cuenca",
+  "pos": [
+    235,
+    372
+  ],
+  "menor": true,
+  "oficial": "Andamios de madera podrida en la pared de la falla, al oeste: las excavaciones del reino de Ahar, abandonadas cuando el pozo se secó. Las grietas siguen ahí; el Ícor no.\n\nLa Liga las midió en el año 90 y las declaró agotadas. En el 214, unos pastores dicen haber visto luz roja al fondo. La Liga no ha vuelto a medirlas.",
+  "enlaces": [
+    "cuenca-del-cerco",
+    "ahar",
+    "pozo-sellado"
+  ]
+}

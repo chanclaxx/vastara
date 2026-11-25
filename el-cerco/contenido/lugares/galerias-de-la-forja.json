@@ -1,0 +1,19 @@
+{
+  "id": "galerias-de-la-forja",
+  "tipo": "lugar",
+  "titulo": "Galerías de la Forja",
+  "subtitulo": "La cordillera hueca",
+  "voz": "forja",
+  "territorio": "forja",
+  "pos": [
+    770,
+    195
+  ],
+  "menor": false,
+  "oficial": "Ciudades-taller excavadas dentro de la cordillera, con hornos que no se apagan y agua que sube por la montaña sin que nadie la cargue. Es el único lugar de Vástara donde se refina el Ícor.\n\nEn la plaza de cada galería cuelga la placa de la obra en curso, con su cifra y su firma. La de la galería mayor dice hoy: Asedio de Vedre. La firma Emeric Sault.",
+  "enlaces": [
+    "la-forja",
+    "registro-de-costo",
+    "emeric-sault"
+  ]
+}

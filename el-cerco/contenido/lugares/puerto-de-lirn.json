@@ -1,0 +1,19 @@
+{
+  "id": "puerto-de-lirn",
+  "tipo": "lugar",
+  "titulo": "Lirn, el puerto",
+  "subtitulo": "El Marjal · la boca del delta",
+  "voz": "marjal",
+  "territorio": "marjal",
+  "pos": [
+    222,
+    652
+  ],
+  "menor": true,
+  "oficial": "El único puerto de mar de Vástara, levantado sobre pilotes donde el Sied se abre al mar. Por Lirn entra y sale todo lo que no cabe en una barcaza: acero, sal, crédito y noticias.\n\nLa Casa Vedrani tiene aquí su residencia, con un estanque interior que nadie ha visto. Dicen que en él vive el Signo de Teodra.",
+  "enlaces": [
+    "teodra-vedrani",
+    "el-marjal",
+    "rio-sied"
+  ]
+}

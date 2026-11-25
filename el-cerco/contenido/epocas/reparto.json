@@ -1,0 +1,22 @@
+{
+  "id": "reparto",
+  "tipo": "epoca",
+  "titulo": "El Reparto",
+  "anio": "Año 0",
+  "voz": "solania",
+  "lamina": {
+    "x": 500,
+    "y": 350,
+    "ancho": 1000,
+    "pie": "Los cuatro ministros firman mientras se sella el pozo"
+  },
+  "oficial": "Cuatro ministros se repartieron la tierra y al dios. Cada uno tomó un rostro de Ahar: Vhar, el que Vigila; Ysmé, la que Recuerda; Kadem, el Dios Mudo, y el Ancestro, que no se equivoca.\n\nEl mismo día escribieron las cuatro tradiciones y sellaron el pozo para que nadie volviera a pelear por él. Desde ese día se cuentan los años.",
+  "enlaces": [
+    "solania",
+    "el-marjal",
+    "estepa-de-kadem",
+    "la-forja",
+    "pozo-sellado"
+  ],
+  "imagen": "imagenes/epocas/reparto.webp"
+}

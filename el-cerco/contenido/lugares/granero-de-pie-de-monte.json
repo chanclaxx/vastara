@@ -1,0 +1,19 @@
+{
+  "id": "granero-de-pie-de-monte",
+  "tipo": "lugar",
+  "titulo": "Granero de Pie de Monte",
+  "subtitulo": "La Forja · al pie de la cordillera",
+  "voz": "forja",
+  "territorio": "forja",
+  "pos": [
+    590,
+    252
+  ],
+  "menor": true,
+  "oficial": "Los graneros donde la Forja guarda lo que no puede cultivar. La montaña no da trigo: lo da Solania, lo trae el delta y lo paga la Liga con acero y con refinado.\n\nLos graneros guardan grano para 3 inviernos. La Liga lo llama prudencia. En el delta lo llaman cálculo.",
+  "enlaces": [
+    "la-forja",
+    "solania",
+    "el-marjal"
+  ]
+}

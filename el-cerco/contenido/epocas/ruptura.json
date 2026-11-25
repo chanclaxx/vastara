@@ -1,0 +1,20 @@
+{
+  "id": "ruptura",
+  "tipo": "epoca",
+  "titulo": "La Ruptura",
+  "anio": "Año 112",
+  "voz": "solania",
+  "lamina": {
+    "x": 740,
+    "y": 560,
+    "ancho": 330,
+    "pie": "Los clanes se apartan del Callado tras su única frase"
+  },
+  "oficial": "Un Callado de la estepa pronunció la única frase que su ley le permite, y murió al decirla, como manda la Boca Cerrada. Lo que dijo partió la estepa en siete clanes que no han vuelto a reunirse.\n\nDesde entonces sus compañías se venden por separado.",
+  "enlaces": [
+    "estepa-de-kadem",
+    "boca-cerrada",
+    "corredor-de-la-estepa"
+  ],
+  "imagen": "imagenes/epocas/ruptura.webp"
+}

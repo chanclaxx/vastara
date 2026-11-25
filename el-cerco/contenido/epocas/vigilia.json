@@ -1,0 +1,25 @@
+{
+  "id": "vigilia",
+  "tipo": "epoca",
+  "titulo": "La Segunda Vigilia",
+  "anio": "Año 214",
+  "voz": "solania",
+  "lamina": {
+    "x": 345,
+    "y": 455,
+    "ancho": 220,
+    "pie": "La vanguardia baja por el Sied hacia la Esclusa"
+  },
+  "oficial": "Ocho semanas después del banquete, la vanguardia de Marco de Arbelas cruza la Cuenca del Cerco. Es la primera vez en doscientos catorce años que Solania entra en el Marjal.\n\nNo va a conquistar: va a leer. Baja por el río Sied hacia la Esclusa de Vedre, que cierra el camino al archivo de nombres.",
+  "verdad": {
+    "por": "pliego-ambaz",
+    "texto": "«El factor gremial entregó al teniente cuarenta gotas de refinado para la soldada de las compañías. El libro del factor tenía dos columnas, Vanguardia y Vedre. Las dos tenían entregas de la misma semana.»"
+  },
+  "enlaces": [
+    "marco-de-arbelas",
+    "esclusa-de-vedre",
+    "la-forja",
+    "rio-sied"
+  ],
+  "imagen": "imagenes/epocas/vigilia.webp"
+}

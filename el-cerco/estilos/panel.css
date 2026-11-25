@@ -1,0 +1,141 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   PANEL: la hoja que se abre a la derecha con una entrada o una lista.
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.panel { display: none; }
+.panel.abierto {
+  display: block;
+  position: fixed; z-index: 15;
+  top: var(--alto-cabecera); right: 0; bottom: 0;
+  width: min(var(--ancho-panel), 100vw);
+  overflow-y: auto;
+  background: var(--papel);
+  color: var(--tinta);
+  box-shadow: -14px 0 50px #000000a0;
+  animation: entrar-panel 0.35s ease-out;
+}
+@keyframes entrar-panel { from { transform: translateX(40px); opacity: 0; } }
+@media (max-width: 820px) {
+  .panel.abierto {
+    top: auto; left: 0; width: auto;
+    max-height: 66%;
+    border-top: 1px solid var(--papel-sombra);
+    box-shadow: 0 -12px 40px #000000a0;
+    animation-name: subir-panel;
+  }
+  @keyframes subir-panel { from { transform: translateY(40px); opacity: 0; } }
+}
+
+.ficha { padding: 26px 30px 40px; position: relative; }
+@media (max-width: 820px) { .ficha { padding: 20px 16px 32px; } }
+
+.cerrar {
+  position: absolute; top: 14px; right: 16px;
+  background: none; border: none; color: var(--tinta-3);
+  font-size: 26px; line-height: 1; padding: 4px 8px;
+}
+.cerrar:hover { color: var(--tinta); }
+
+.ficha-tipo { margin: 0 0 4px; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--tinta-3); }
+.ficha h2 { margin: 0; font-family: var(--letra-documento); font-weight: normal; font-size: 32px; line-height: 1.1; padding-right: 30px; }
+.ficha-sub { margin: 6px 0 0; font-family: var(--letra-documento); font-style: italic; font-size: 16px; color: var(--tinta-2); }
+
+.voz {
+  margin: 22px 0 10px;
+  font-size: 13px; letter-spacing: 0.5px; color: var(--tinta-2);
+  display: flex; align-items: center; gap: 8px;
+}
+.voz::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--lacre); }
+
+.texto { font-family: var(--letra-documento); font-size: 18px; line-height: 1.55; }
+.texto p { margin: 0 0 12px; }
+
+/* La versión oficial tachada por un pliego */
+.texto-tachado { color: var(--tinta-3); }
+.texto-tachado span {
+  background-image: linear-gradient(var(--tinta-2), var(--tinta-2));
+  background-repeat: no-repeat;
+  background-position: 0 58%;
+  background-size: 100% 1.4px;
+}
+
+/* La verdad: la letra del Testigo */
+.capa-verdad {
+  margin-top: 18px;
+  padding: 14px 16px 6px 18px;
+  background: var(--papel-2);
+  border-left: 3px solid var(--tinta);
+}
+.fuente { margin: 0 0 10px; font-size: 12.5px; letter-spacing: 0.4px; color: var(--tinta-2); }
+.capa-verdad .fuente { text-transform: uppercase; letter-spacing: 1.2px; font-size: 11.5px; }
+
+/* La exaltación: el arciprestazgo corrige */
+.correccion {
+  display: inline-block;
+  margin: 22px 0 14px;
+  padding: 4px 10px;
+  border: 1.5px solid var(--exaltado);
+  color: var(--exaltado);
+  font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase;
+  transform: rotate(-2deg);
+}
+.texto-exaltado { color: var(--exaltado); }
+
+/* Modo desarrollo: las tres capas a la vista */
+.capa-desarrollo { margin-top: 18px; padding-top: 10px; border-top: 1px dashed var(--tinta-3); }
+.capa-desarrollo h3 { margin: 0 0 8px; font-size: 12px; letter-spacing: 2px; color: var(--tinta-3); }
+
+/* Enlaces */
+.enlaces { margin-top: 28px; padding-top: 14px; border-top: 1px solid var(--papel-sombra); }
+.enlaces h3, .lista h3 { margin: 0 0 10px; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--tinta-3); font-weight: normal; }
+.enlaces ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.enlaces a {
+  display: inline-block; text-decoration: none;
+  padding: 4px 10px; border: 1px solid var(--papel-sombra);
+  font-family: var(--letra-documento); font-size: 15px;
+}
+.enlaces a:hover { border-color: var(--tinta-3); background: var(--papel-2); }
+
+/* Listas */
+.lista ul { list-style: none; margin: 18px 0 0; padding: 0; }
+.lista li a {
+  display: block; text-decoration: none;
+  padding: 12px 0; border-bottom: 1px solid var(--papel-sombra);
+}
+.lista li a:hover .item-titulo { text-decoration: underline; }
+.item-titulo { display: block; font-family: var(--letra-documento); font-size: 20px; }
+.item-sub { display: block; font-size: 14px; color: var(--tinta-2); margin-top: 2px; }
+.item-marca { float: right; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--tinta-2); margin-top: 6px; }
+.item-marca.exaltada { color: var(--exaltado); }
+
+.reiniciar {
+  margin-top: 26px; background: none; border: none; padding: 0;
+  color: var(--tinta-3); font-size: 13px; text-decoration: underline;
+}
+
+/* Documentos: el sello */
+.sello {
+  width: 58px; height: 58px; border-radius: 50%;
+  background: radial-gradient(circle at 40% 35%, #4a3426, var(--lacre) 70%);
+  display: grid; place-items: center;
+  margin: 22px 0 12px;
+  box-shadow: 0 2px 6px #00000060;
+}
+.sello svg { width: 30px; height: 30px; }
+.sello.roto { background: none; box-shadow: none; position: relative; }
+.sello.roto::before, .sello.roto::after {
+  content: ""; position: absolute; width: 29px; height: 58px; top: 0;
+  background: radial-gradient(circle at 100% 50%, #4a3426, var(--lacre) 70%);
+}
+.sello.roto::before { left: -6px; border-radius: 29px 0 0 29px; transform: rotate(-14deg); }
+.sello.roto::after { right: -6px; border-radius: 0 29px 29px 0; transform: rotate(10deg);
+  background: radial-gradient(circle at 0% 50%, #4a3426, var(--lacre) 70%); }
+.estado-sello { font-family: var(--letra-documento); font-style: italic; font-size: 17px; color: var(--tinta-2); }
+.texto-documento { margin-top: 10px; }
+
+/* Ilustración que encabeza la ficha (solo si la entrada tiene campo "imagen") */
+.ilustracion-panel {
+  aspect-ratio: 16 / 9; margin: -6px 0 18px;
+  border: 1px solid var(--papel-sombra); filter: sepia(0.12) saturate(0.9);
+}
+.ilustracion-panel.personaje { aspect-ratio: 4 / 3; background-position: center 8%; }
